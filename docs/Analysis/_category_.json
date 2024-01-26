@@ -1,0 +1,8 @@
+{
+  "label": "Analytical Lab",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "An overview of the Analysis Module. This module is used to store the results of plant material analyses."
+  }
+}

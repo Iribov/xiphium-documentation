@@ -1,0 +1,17 @@
+jim:
+  name: Jim Kerver
+  title: 4D Developer @Iribov
+  url: https://github.com/Jim-Kerver
+  image_url: https://github.com/Jim-Kerver.png
+
+yangshun:
+  name: Yangshun Tay
+  title: Front End Engineer @ Facebook
+  url: https://github.com/yangshun
+  image_url: https://github.com/yangshun.png
+
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
