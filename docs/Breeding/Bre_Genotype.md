@@ -1,1 +1,0 @@
-Genotypes are plants used as parents or selections that come from a [Bre_Crosses](Bre_Crosses.md)

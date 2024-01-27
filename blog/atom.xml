@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Iribov.github.io/xiphium-documentation/blog</id>
+    <title>Xiphium Documentation Blog</title>
+    <updated>2024-01-26T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://Iribov.github.io/xiphium-documentation/blog"/>
+    <subtitle>Xiphium Documentation Blog</subtitle>
+    <icon>https://Iribov.github.io/xiphium-documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Xiphium 2024-W04 update]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index"/>
+        <updated>2024-01-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Github.]]></summary>
+        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Github.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-sorting-scanning-menu">Greenhouse Sorting Scanning Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#greenhouse-sorting-scanning-menu" class="hash-link" aria-label="Direct link to Greenhouse Sorting Scanning Menu" title="Direct link to Greenhouse Sorting Scanning Menu">​</a></h2>
+<p>Some small changes have been made to the Greenhouse sorting scanning menu. It is now possible to add a remark to the sorting!</p>
+<p>The popup 'GF_Reason_Not_Planted_Machine' has been modified with some extra options and changes to current options.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-month-liquidity">Financial Month (liquidity)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#financial-month-liquidity" class="hash-link" aria-label="Direct link to Financial Month (liquidity)" title="Direct link to Financial Month (liquidity)">​</a></h2>
+<p>The Financial Month (called Fin_Liq_Month a.k.a. 'Financial Liquidity Month' on the background) has gotten a new tab added to its list form named 'Creditor'. 15 fields have been added that are supposed to track the Open and Overdue amounts+Percentages op debitors.</p>
+<p>Also, some updates have been made to the 'Update Record' method. The intension of this change is unclear but it seems to improve current queries.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover-month">Financial turnover month<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#financial-turnover-month" class="hash-link" aria-label="Direct link to Financial turnover month" title="Direct link to Financial turnover month">​</a></h2>
+<p>Some fields have been added to the Financial turnover month table that track the Debitors Open Percentage and Debitor Overdue PErcentage of both the debitor company and the debitor mother company.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-order">Analysis Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#analysis-order" class="hash-link" aria-label="Direct link to Analysis Order" title="Direct link to Analysis Order">​</a></h2>
+<p>The Analysis Order detail screen has been subject to change according to feedback from the ISO evaluation. Unused button will be removed, and used buttons will be rearranged. If a button has been removed, and you believe it has to come back, please contact the Analytical Lab.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-suborder">Analysis Suborder<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#analysis-suborder" class="hash-link" aria-label="Direct link to Analysis Suborder" title="Direct link to Analysis Suborder">​</a></h2>
+<p>The Analysis suborder code has received some update to automatically create 'Pathogens to test' and 'Markers to Test' links from their respective text fields.</p>
+<p>Also, the 'Update Record' method is currently under construction to remove old/unnecessary code. This should have no effect on daily operations but if there are, contact IT immediately!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-note">Delivery Note<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#delivery-note" class="hash-link" aria-label="Direct link to Delivery Note" title="Direct link to Delivery Note">​</a></h2>
+<p>A small change has been made to the 'Update Record' method that automatically enters an employee code and employee name of the account manager involved in the delivery note. The account manager is automatically entered by searching in the Company table with the company code customer from the delivery note.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>A small change has been made to the 'Update Record' method optimizing the way company production is taken from order group.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="iribov-in-brasil">Iribov in Brasil!<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#iribov-in-brasil" class="hash-link" aria-label="Direct link to Iribov in Brasil!" title="Direct link to Iribov in Brasil!">​</a></h2>
+<p>The TCPA_SyncExportOrders method now has lines added that take Company code 006, and country 'Brasil' into account.</p>]]></content>
+        <author>
+            <name>Jim Kerver</name>
+            <uri>https://github.com/Jim-Kerver</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/welcome</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/welcome"/>
+        <updated>2021-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
+<p>The blog post date can be extracted from filenames, such as:</p>
+<ul>
+<li><code>2019-05-30-welcome.md</code></li>
+<li><code>2019-05-30-welcome/index.md</code></li>
+</ul>
+<p>A blog post folder can be convenient to co-locate blog post images:</p>
+<p><img loading="lazy" alt="Docusaurus Plushie" src="https://iribov.github.io/xiphium-documentation/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p>The blog supports tags as well!</p>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <author>
+            <name>Yangshun Tay</name>
+            <uri>https://github.com/yangshun</uri>
+        </author>
+        <category label="facebook" term="facebook"/>
+        <category label="hello" term="hello"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MDX Blog Post]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/mdx-blog-post</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/mdx-blog-post"/>
+        <updated>2021-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
+        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p><div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><button>Click me!</button></div></div>]]></content>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>
