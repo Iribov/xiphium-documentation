@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Greenhouse/Greenhouse_Planning/Automatic_Planning.md",
+                "file": "Markdown_intro.md",
                 "mode": "source",
                 "source": true
               }
@@ -75,7 +75,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Greenhouse/Greenhouse_Planning/Automatic_Planning.md",
+                    "file": "Markdown_intro.md",
                     "mode": "source",
                     "source": false
                   }
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Greenhouse/Greenhouse_Planning/Automatic_Planning.md",
+                "file": "Markdown_intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Greenhouse/Greenhouse_Planning/Automatic_Planning.md",
+                "file": "Markdown_intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Greenhouse/Greenhouse_Planning/Automatic_Planning.md"
+                "file": "Markdown_intro.md"
               }
             }
           }
@@ -229,15 +229,19 @@
   },
   "active": "41e00caa1e8c8f45",
   "lastOpenFiles": [
-    "Breeding/test.md",
+    "Greenhouse/Greenhouse_Planning/GHPA.md",
+    "Analysis/Structure.md",
+    "Analysis/Reference_Collection.md",
+    "Analysis/Analysis_Oligo.md",
+    "Analysis/Pathogen.md",
     "Greenhouse/Greenhouse_Planning/Automatic_Planning.md",
+    "Breeding/test.md",
     "Breeding/media/image1.png",
     "Breeding/media",
     "Greenhouse/Greenhouse_Planning/Protocol1.md",
     "Greenhouse/Greenhouse_Planning/Prot_Lines.md",
     "Greenhouse/Greenhouse_Planning/Introduction.md",
     "Greenhouse/Greenhouse_Planning/GHPA_Overview.md",
-    "Greenhouse/Greenhouse_Planning/GHPA.md",
     "Greenhouse/GF_Locations History.md",
     "Greenhouse/Greenhouse_Field.md",
     "Greenhouse/Mutations.md",
@@ -266,10 +270,6 @@
     "().md",
     "Analysis/Analysis_DataPoint.md",
     "Greenhouse/img",
-    "Analysis/Analysis_Overview.md",
-    "Analysis/Structure.md",
-    "Analysis/Analysis_Isolation.md",
-    "Breeding/Bre_Genotype.md",
-    "Breeding/Bre_Crosses.md"
+    "Analysis/Analysis_Overview.md"
   ]
 }

@@ -16,12 +16,12 @@ const config = {
   url: 'https://Iribov.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/xiphium-documentation/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Iribov', // Usually your GitHub org/user name.
-  projectName: 'xiphium-documentation.github.io', // Usually your repo name.
+  projectName: 'xiphium-documentation', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 

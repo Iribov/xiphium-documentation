@@ -97,7 +97,7 @@ Don't forget to put a whitespace behind the # to create a header.
 
 ---
 ### links (website and document)
-`[website name](website url): [Google]([Google](https://www.google.com/))` = [Google]([Google](https://www.google.com/))
+`[website name](website url): [Google](https://www.google.com/)` = [Google](https://www.google.com/)
 
 `[document name](relative document path): [intro](intro.md)` = [intro](intro.md)
 
