@@ -46,14 +46,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Iribov/xiphium-documentation/docs',
+            'https://github.com/Iribov/xiphium-documentation/edit/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Iribov/xiphium-documentation/blog',
+            'https://github.com/Iribov/xiphium-documentation/edit/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -82,7 +82,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Iribov/xiphium-documentation',
             label: 'GitHub',
             position: 'right',
           },
