@@ -20,6 +20,8 @@ A new structure of dataflow is (being) developed for the analytical lab. The bas
     
 - **[Analysis_Plate](Analysis_Plate.md)** is merely a container for DataPoints to be put in. Plate handling data is stored here (who, what, when etc.)
 
+---
+
 Details about practical work/protocols are stored in separate tables. 
 
 - **[Analysis_Test](Analysis_Test.md)**: Table which contains information about a '(pcr) test'. This can be seen as a protocol except the practical steps/instructions are missing. Is related to 'Pathogen' with a N:N relation. 
