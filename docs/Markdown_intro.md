@@ -16,8 +16,13 @@ Markdown files can easily be converted to a website with nice styling and format
 
 ## Markdown Editors
 It's possible to use any plain text editor to create and edit markdown files. However, it can be hard to imagine what a markdown file looks like wihtout the formatting applied. Therefore, we can use markdown editors with built in renderers. Here are two popular options:
->Notes on Mac is **not** a plain text editor!
->Notepad on windows is!
+
+:::warning 
+'Notes' on Mac is **not** a plain text editor!
+:::
+:::info
+'Notepad' on Windows is a plain text editor!
+:::
 
 
 ### Obsidian
@@ -28,7 +33,7 @@ It's possible to use any plain text editor to create and edit markdown files. Ho
 Your settings should now look like the following:
 ![](img/Schermafbeelding%202024-01-25%20111531.png)
 :::info
-Obsidian uses a slightly different syntax (dialect, if you will) than docusaurus. Changing some settings makes them compatible, and makes sure all your pictures and links will work correctly.
+Obsidian uses a slightly different syntax (dialect, if you will) than docusaurus. Changing some settings at least makes the links compatible so all your pictures and links will work correctly. Other things might still work differently in obsidian than in docusaurus!
 :::
 
 ### Visual Studio Code
