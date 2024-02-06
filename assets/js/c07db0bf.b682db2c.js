@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8477],{1912:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/xiphium-documentation/blog/tags/docusaurus","allTagsPath":"/xiphium-documentation/blog/tags","count":2,"unlisted":false}')}}]);
