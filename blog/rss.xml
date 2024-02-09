@@ -4,10 +4,53 @@
         <title>Xiphium Documentation Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Documentation Blog</description>
-        <lastBuildDate>Fri, 02 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 09 Feb 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W06 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update</guid>
+            <pubDate>Fri, 09 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse">Greenhouse<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#greenhouse" class="hash-link" aria-label="Direct link to Greenhouse" title="Direct link to Greenhouse">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scanning-menu-sorting">Scanning Menu Sorting<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#scanning-menu-sorting" class="hash-link" aria-label="Direct link to Scanning Menu Sorting" title="Direct link to Scanning Menu Sorting">​</a></h3>
+<p>The greenhouse scanning menu for sorting continues to get incremental improvements. The changes are small and the intentions are unclear from the code alone, but there is work being done to improve the experience of the scanning menu.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="excel-flex-export">Excel Flex Export<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#excel-flex-export" class="hash-link" aria-label="Direct link to Excel Flex Export" title="Direct link to Excel Flex Export">​</a></h3>
+<p>Work is being done on the Excel Flex Export for the Greenhouse. When the new export will be ready for testing/use is unclear from just reading the code.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="iribov-brazil">Iribov Brazil<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#iribov-brazil" class="hash-link" aria-label="Direct link to Iribov Brazil" title="Direct link to Iribov Brazil">​</a></h2>
+<p>Iribov Brazil is continued to be integrated into the system. This week the integration is in the Tissue culture scanning menu, specifically the 'printing' menu for printing QR/barcodes for tissue culture.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery">Delivery<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#delivery" class="hash-link" aria-label="Direct link to Delivery" title="Direct link to Delivery">​</a></h2>
+<p>There have been several changes in different parts related to deliveries:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-and-planning-actions">Delivery and Planning Actions<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#delivery-and-planning-actions" class="hash-link" aria-label="Direct link to Delivery and Planning Actions" title="Direct link to Delivery and Planning Actions">​</a></h3>
+<p>a small change to method <em><strong>DeN_ExportToTC2E_Scanning</strong></em> is done. a new 'If, Else' statement is introduced to a query for Planning Actions. If the delivery_item has a 'Scan_Week_Realized', that week is used to search for planning actions. Otherwise, the week set in the DeliveryNote is used.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="unbundling">Unbundling<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#unbundling" class="hash-link" aria-label="Direct link to Unbundling" title="Direct link to Unbundling">​</a></h3>
+<p>A small addition to the method <em><strong>DeSca_UnBundleSelection</strong></em> is done. The method now also copies the 'Scan_Type_Box' from Delivery_Scanning to the Delivery_Item when 'unbundling' bundled deliveries.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="customer-feedback-excel-export">Customer Feedback Excel Export<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#customer-feedback-excel-export" class="hash-link" aria-label="Direct link to Customer Feedback Excel Export" title="Direct link to Customer Feedback Excel Export">​</a></h3>
+<p>Work is being done on the Customer Feedback Excel Export. When the export is ready for testing/use is unclear from just reading the code.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="onedrive-photo-sharing">OneDrive Photo sharing<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#onedrive-photo-sharing" class="hash-link" aria-label="Direct link to OneDrive Photo sharing" title="Direct link to OneDrive Photo sharing">​</a></h3>
+<p>Some code has been added to the <em><strong>DiT_UpdateRecord</strong></em> method to shield Iribov Brazil off from the OneDrive photo sharing system. Probably with the intention of adding Iribov Brazil in later.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-document">Web Document<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#web-document" class="hash-link" aria-label="Direct link to Web Document" title="Direct link to Web Document">​</a></h2>
+<p>Method <em><strong>Doc_AddDocument</strong></em> has received additional error catching. It seems like a method that can add a document to a record from the web (apps). It is now coded in that a file must have a filename when uploading, and returns an error if it doesn't.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="backup-info">Backup Info<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#backup-info" class="hash-link" aria-label="Direct link to Backup Info" title="Direct link to Backup Info">​</a></h2>
+<p>The method that informs us if a Xiphium backup had any trouble has been updated. The information message now includes the 'DefaultCompany' Code (which database had trouble with the backup?).</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>The 'DefaultCompany' Code is the company code of where the Xiphium Database is running. The Xiphium Database in NL has 'DefaultCompany' Code '001', Macedonia '003' etc.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-planning-actions-tcpa">TC Planning Actions (TCPA)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#tc-planning-actions-tcpa" class="hash-link" aria-label="Direct link to TC Planning Actions (TCPA)" title="Direct link to TC Planning Actions (TCPA)">​</a></h2>
+<p>Small change made to the UpdateRecord methods. If a TCPA has Activity "DT@" (@ is a wildcard than can be anything), the TCPA no also needs a ComCode Production to receive the 'DefaultCompany' Code as its 'ComCode Master'.<br>
+<!-- -->It seems like this change is done in regards to synchronizing  "DT" Action between locations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>2 buttons have been added.</p>
+<ol>
+<li>'Create TCPA delivery actions'</li>
+<li>'Fill TCPC IDM via TCPA T4 Ord IDM'</li>
+</ol>
+<p>These buttons have been added in regards to a request to make it easier to create TC Plan Actions for a large(r) amount of Orders at once, and to close the 'triangle' of Order, TCPC and TCPA. I believe these button are added as a test. If/When they are to be used by others in the 'regular' workflow, is unclear from just reading the code.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tc-planning-action-tcpa">TC Planning Action (TCPA)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update#tc-planning-action-tcpa" class="hash-link" aria-label="Direct link to TC Planning Action (TCPA)" title="Direct link to TC Planning Action (TCPA)">​</a></h3>
+<p>Button 'Fill OrderIDM T4 via Week Root in Order' has been added to the TCPA List Form. This button is supposed to close the 'Triange' of Order, TCPC and TCPA. The intended usage in the workflow are unclear from just reading the code.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W05 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/02/02/Xiphium-W05-Update</link>
