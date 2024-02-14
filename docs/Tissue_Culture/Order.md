@@ -1,8 +1,15 @@
+---
+sidebar_position: 1
+---
 Order is the table which holds a Tissue Culture and/or Greenhouse order.
 The core information of an Order includes:
 - Client information
 - Order Type
 - Crop/Plant information
-- (Epxected/Requested) Delivery week
+- (Expected/Requested) Delivery week
 - (Expected/Requested) Amount of plants
-- 
+
+On top of the basic registration of an order, the Order table also tracks lots of different information from related placed. These include\:
+- TC planning
+- Delivery
+- Greenhouse
