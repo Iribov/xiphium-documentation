@@ -2,7 +2,8 @@
 sidebar_position: 6
 ---
 
-Analysis_DataPoint is the representation of the analysis performed after isolation. A Datapoint is therefore ALWAYS linked to an [Analysis_Isolation](Analysis_Isolation.md). A datapoint contains all analysis results from a single instance and a single analysis. When a new analysis is done with the identical isolated DNA ([Analysis_Isolation](Analysis_Isolation.md)), a new DataPoint is made.
+# Analysis Datapoint
+Analysis Datapoint is the representation of the analysis performed after isolation. A Datapoint is therefore ALWAYS linked to an [Analysis_Isolation](Analysis_Isolation.md). A datapoint contains all analysis results from a single instance and a single analysis. When a new analysis is done with the identical isolated DNA ([Analysis_Isolation](Analysis_Isolation.md)), a new DataPoint is made.
 
 Most of the raw data of a datapoint is stored inside an object field. We maintain different structures inside of these object fields depending on the type of analysis done.
 

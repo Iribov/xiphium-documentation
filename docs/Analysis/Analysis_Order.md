@@ -35,11 +35,23 @@ The technology or '**method**' used for analysis of this Order
 The **Objective** of the Analysis (should be linked to a 'method'). The **Objective** will move to [Analysis_SubOrder](Analysis_SubOrder.md) in due time.  
 What kind of result is expected from this analysis? where the common ones are:
 - Ploidy
+- Ploidy i.s.
 - Aneuploidy
 - Pathogen (detection of pathogens)
 - Genotyping
 - etc.
 There are many more variations entered in the system. These variations should be analyzed and brought back to a few well thought out categories.
+
+:::info
+Fields marked with 'will move to [Analysis_SubOrder](Analysis_SubOrder.md) in due time.' are now in a special position where you can still anter them in the Analysis Order, but as soon as suborder are created (with a value in the corresponding field), it will overwrite the value originally entered in the Order. If there are suborders with different values, all values are copied to the Analysis Order and separated with a `, `.
+
+These fields include:
+1. Crop Code
+2. Crops (Crop Name)
+3. Type Objective
+4. Type Material (Type Tissue)
+:::
+
 # Tabs
 When opening an Analysis Order, different tabs are dynamically shown depending on the type of Method used.
 ![](img/Analysis_Order_Detail_Tabs_Screenshot.png)
