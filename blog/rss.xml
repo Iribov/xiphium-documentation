@@ -4,10 +4,58 @@
         <title>Xiphium Documentation Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Documentation Blog</description>
-        <lastBuildDate>Fri, 09 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Feb 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W07 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update</guid>
+            <pubDate>Fri, 16 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project2-year">Project2 Year<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#project2-year" class="hash-link" aria-label="Direct link to Project2 Year" title="Direct link to Project2 Year">​</a></h2>
+<p>Project2 Year now contains code to get the cost from the invoice items. This is done by searching Invoice_Items on their 'ProjectCode2 Debitor' field (and some other parameters of course). These costs are then divided into 3 categories:</p>
+<ol>
+<li>Analytical (when creditor is company code 12)</li>
+<li>Greenhouse (when creditor is company code 5)</li>
+<li>Other</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Internal invoices for Analytical has been done for multiple years. However, internal invoicing for the Greenhouse is not a thing yet. The code is already implemented, but won't get any data until internal invoicing for Greenhouse is realized.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#analytical-lab" class="hash-link" aria-label="Direct link to Analytical lab" title="Direct link to Analytical lab">​</a></h2>
+<p>multiple changes are realized this week in regards to the 'Analysis' module.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="project2-code-from-analysis-to-invoice-items">Project2 code from Analysis to Invoice items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#project2-code-from-analysis-to-invoice-items" class="hash-link" aria-label="Direct link to Project2 code from Analysis to Invoice items" title="Direct link to Project2 code from Analysis to Invoice items">​</a></h3>
+<p>ProjectCode2 Debitor and creditor are now filled automatically when creating an invoice from an Analysis Order.</p>
+<p>The fields 'ProjectCode2 Creditor' and 'ProjectCode2 Debitor' from the Analysis Order are copied into the 'ProjectCode2 Creditor' and 'ProjectCode2 Debitor' fields of the Invoice Items.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-order-and-suborder">Analysis Order and SubOrder<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#analysis-order-and-suborder" class="hash-link" aria-label="Direct link to Analysis Order and SubOrder" title="Direct link to Analysis Order and SubOrder">​</a></h3>
+<p>Some fields are both entered in the Analysis Order, and Analysis Suborder. And because the different analysis suborders can contain different values for 1 field, and the analysis order typically can only hold 1 value; there's a mismatch.</p>
+<p>Therefore, for the following fields it is still possible to enter in the Analysis_Order upon creation, but as soon as suborders are created (with a value in the field), these values will overwrite the Analysis_Order value. When different values are entered in the different suborder, these values will be concatenated in the Analysis Order.</p>
+<p>This applies to fields:</p>
+<ul>
+<li>Crop Code</li>
+<li>Crops (Crop Name Scientific)</li>
+<li>Type Objective</li>
+<li>Type Material (Type tissue)</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Example</div><div class="admonitionContent_BuS1"><details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Example with Crop</summary><div><div class="collapsibleContent_i85q"><p>If You create an Analysis Order, you can only enter 1 Crop.
+Let's say you use Brassica.</p><p>But in reality, the client sends both Brassica and Iris. Instead of splitting this into 2 order, it's possible to create 2 suborders: 1 with crop 'Brassica', and 1 with crop 'Iris'.</p><p>The problem, however, is when you look at the Analysis Order it only says 'Brassica'. This is the mismatch we solved with this update.</p><p>Now, because we have 2 suborders ('Brassica' and 'Iris'), the analysis Orders is updated to say 'Brassica, Iris'. So now, when you look at the order, it mentions both crops. When you're searching for either 'Brassica' or 'Iris', the order always comes up.</p></div></div></details></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-genotyping">Analysis Genotyping<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#analysis-genotyping" class="hash-link" aria-label="Direct link to Analysis Genotyping" title="Direct link to Analysis Genotyping">​</a></h3>
+<p>A new Excel file for importing has been created by the analytical lab. The import button is now updated and started implemented.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reference-collection-individual">Reference Collection individual<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#reference-collection-individual" class="hash-link" aria-label="Direct link to Reference Collection individual" title="Direct link to Reference Collection individual">​</a></h3>
+<p>A scanning system for tracking individual tubes of a 'Reference Collection' has been developed and exposed this week. Testing for bugs is still necessary and will start next week.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clone">Clone<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#clone" class="hash-link" aria-label="Direct link to Clone" title="Direct link to Clone">​</a></h2>
+<p>Modify Batch now takes the field Clo_CB_Clock into consideration. When a clone already has this 'blocked' property, the fields that track 'who' and 'when' blocked this record will not be overwritten.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-field">Greenhouse Field<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#greenhouse-field" class="hash-link" aria-label="Direct link to Greenhouse Field" title="Direct link to Greenhouse Field">​</a></h2>
+<p>Greenhouse Field now contains a field called 'GF_Analysis_Clean'.
+This field copies the 'Clo_AnSam_Result_0_Clean' field from [Clone] to indicate whether the clone was tested 'Clean' by the analytical lab.
+The field also changes color depending on the contents of that field (Green when clean, red when not clean, etc.).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tcpa-see-certification">TCPA SEE (Certification)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#tcpa-see-certification" class="hash-link" aria-label="Direct link to TCPA SEE (Certification)" title="Direct link to TCPA SEE (Certification)">​</a></h2>
+<p>There are fields added to the form and filter regarding SEE (certification).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/16/Xiphium-W07-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery items" title="Direct link to Delivery items">​</a></h2>
+<p>The article code field in Delivery Items is now searchable.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W06 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/02/09/Xiphium-W06-Update</link>
