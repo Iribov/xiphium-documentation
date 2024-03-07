@@ -93,5 +93,5 @@ Some invisible buttons (used for sorting) have been modified in the 'list' and '
 Reference Collection individual continues to get improvements as bugs are being found by using the new system.
 
 ## Iribov Brazil
-Iribov Brazil is continued to be integrated into the system. This week, 'HR_WeekEntry' is modified to include comcode 004 in a certain check related to (Team) Manager stuff.
+Iribov Brazil is continued to be integrated into the system. This week, 'HR_WeekEntry' is modified to include comcode 004 in a certain check related to (Team) Manager stuff. (-> this was a change for Ghana)
 
