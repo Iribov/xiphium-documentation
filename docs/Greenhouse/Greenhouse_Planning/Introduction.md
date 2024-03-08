@@ -24,21 +24,33 @@ The idea is that spaces will be more integrated in the Greenhouse planning so th
 ---
 ## 1. Order
 
-Everything starts with an [Order]. If ‘Location Delivery 1’ is a company that has the ‘Is Greenhouse’ checkmark in the [Company] table, a greenhouse Protocol can be searched with the ***Ord_Update_GH_Protocol**** Method and is (currently) under the buttons ‘Update GHPA’ and ‘Update GH Protocol’ as shown in figure:
+Everything starts with an [Order](../../Tissue_Culture/Order.md). If ‘Location Delivery 1’ is a company that has the ‘Is Greenhouse’ checkmark in the [Company] table, a greenhouse Protocol can be searched with the ***Ord_Update_GH_Protocol**** Method and is (currently) under the buttons ‘Update GHPA’ and ‘Update GH Protocol’ as shown in figure:
 ![](img/Order_screenshot.png)
 
 The [Order] automatically finds a ‘GH Protocol’ (Greenhouse Protocol) based on the following parameters:
-- Company Code (Delivery location 1). Exact match necessary.
-- Order Type 3 (type end material?). Exact match necessary.
-- Order Type 5 (Purpose). Exact match necessary.
-- Type Start Material. Exact match necessary
-- Crop Code. either an exact match, or Crop Code 0 in Protocol when no exact match is found.
 
-- ~~Department Code~~ currently not used for Greenhouse.
-- ~~Plant Group~~ currently not used for Greenhouse.
-- Priority. Lowest
+| Order               | Protocol1           | Remark |
+| ---                 | ---                 | --- |
+| Location Code 1     | Company Code        | Exact match necessary |
+| Crop Code           | Crop Code           | Exact match is prioritized, otherwise a Protocol With CropCode '0' will suffice |
+| Type Start Material | Type Start Material | Exact match necessary |
+| Order Type 3        | Order Type 3        | Exact match necessary |
+| Order Type 5        | Order Type 5        | Exact match necessary |
+
+:::tip
+A new version of a protocol1 is given priority over the old protocol1 record. 
+:::
+
+:::note
+The above only describes the **automatic** picking of a Protocol1 for an Order. You can always manually assign a Protocol1 to an Order too.
+:::
+
+:::warning
+The column 'Priority' was conceived to give extra control over which protocol will be given priority when similar parameters are present. However, at this time there is no added benefit to using this column.
+:::
 
 The found GH Protocol is (currently) shown in the [Order] when opening it and navigating to the  ‘GreenhouseField’ tab, as shown in the figure below.
+
 ![](img/Order_screenshot.png)
 
 :::info
