@@ -4,10 +4,39 @@
         <title>Xiphium Documentation Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Documentation Blog</description>
-        <lastBuildDate>Fri, 01 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W10 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update</guid>
+            <pubDate>Fri, 08 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cost-calculation">Cost calculation<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#cost-calculation" class="hash-link" aria-label="Direct link to Cost calculation" title="Direct link to Cost calculation">​</a></h2>
+<p>The 'General_CostCalculation' form has received some extra fields. It seems like the fields are there for extra parameters, but it's hard to interpret a form change just from code.</p>
+<p>Method <em><strong>CosCal_Calc</strong></em> has received changes to a few calculations in regards to 'space' calculations? The intentions of these changes are unclear form just reading the code, but the changes seem significant.</p>
+<p>Method <em><strong>CosCal_GetParameters_B4</strong></em> has some changes in calculating process variables that are used in <em><strong>CosCal_Calc</strong></em>. It seems like the changes in <em><strong>CosCal_Calc</strong></em> are done to accommodate the changes done in <em><strong>CosCal_GetParameters_B4</strong></em>. It is unclear if the changes in code result in practical changes, but it does seem to indicate so.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-app">Greenhouse app<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#greenhouse-app" class="hash-link" aria-label="Direct link to Greenhouse app" title="Direct link to Greenhouse app">​</a></h2>
+<p>Method <em><strong>Web_PhotosGetSubjectInfo</strong></em> has added the Greenhouse Field 'barcode' to an object, indicating that the information sent from/to the app now includes this barcode.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery Items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery Items" title="Direct link to Delivery Items">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="account-manager-name">Account Manager Name<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#account-manager-name" class="hash-link" aria-label="Direct link to Account Manager Name" title="Direct link to Account Manager Name">​</a></h3>
+<p>A button is added that updates the account manager responsible and creates an excel with missing Company-Crop combinations. If no Company-Crop record is found, the name is taken from Company, and the Company-Crop combination is exported to Excel.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incident-registration">Incident registration<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#incident-registration" class="hash-link" aria-label="Direct link to Incident registration" title="Direct link to Incident registration">​</a></h3>
+<p>A boolean Field has been added to register if a delivery item is an 'Incident'. An incident is not an issue yet, but it is also not well defined.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical Lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#analytical-lab" class="hash-link" aria-label="Direct link to Analytical Lab" title="Direct link to Analytical Lab">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reference-collection-individual">Reference Collection Individual<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#reference-collection-individual" class="hash-link" aria-label="Direct link to Reference Collection Individual" title="Direct link to Reference Collection Individual">​</a></h3>
+<p>The reference Collection individual label has been improved. Unfortunately, the wish of printing a different label, depending on which tab has been selected in Reference Collection, does not seem possible.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="locked-fields">Locked fields<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#locked-fields" class="hash-link" aria-label="Direct link to Locked fields" title="Direct link to Locked fields">​</a></h3>
+<p>In the analytical part, certain fields become locked based on the status. The field 'Remarks_Invoice' is added to these locked fields.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fin_liq_month">Fin_Liq_Month<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#fin_liq_month" class="hash-link" aria-label="Direct link to Fin_Liq_Month" title="Direct link to Fin_Liq_Month">​</a></h2>
+<p>Several small changes have been done in different places for the [Fin_Liq_Month] table. Indicating it is being prepared for usage.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-field-quality-report-excel-export">Greenhouse Field Quality Report Excel Export<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update#greenhouse-field-quality-report-excel-export" class="hash-link" aria-label="Direct link to Greenhouse Field Quality Report Excel Export" title="Direct link to Greenhouse Field Quality Report Excel Export">​</a></h2>
+<p>Small changes have been made to the method <em><strong>GF_ExportExcelReportQuality</strong></em>, optimizing the report for users.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W09 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/03/01/Xiphium-W09-Update</link>
@@ -57,7 +86,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="reference-collection-individual">Reference Collection Individual<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/01/Xiphium-W09-Update#reference-collection-individual" class="hash-link" aria-label="Direct link to Reference Collection Individual" title="Direct link to Reference Collection Individual">​</a></h3>
 <p>Reference Collection individual continues to get improvements as bugs are being found by using the new system.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="iribov-brazil">Iribov Brazil<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/01/Xiphium-W09-Update#iribov-brazil" class="hash-link" aria-label="Direct link to Iribov Brazil" title="Direct link to Iribov Brazil">​</a></h2>
-<p>Iribov Brazil is continued to be integrated into the system. This week, 'HR_WeekEntry' is modified to include comcode 004 in a certain check related to (Team) Manager stuff.</p>]]></content:encoded>
+<p>Iribov Brazil is continued to be integrated into the system. This week, 'HR_WeekEntry' is modified to include comcode 004 in a certain check related to (Team) Manager stuff. (-&gt; this was a change for Ghana)</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Xiphium 2024-W08 update]]></title>
