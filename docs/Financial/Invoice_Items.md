@@ -8,5 +8,5 @@ The Invoice Item in essence, contains information about:
 	3. What is the item price?
 	4. What is the total amount invoiced for this item?
 2. ProjectCode2:
-	1. ProjectCode2_Debitor: Under which Project2 does this Turnover belong to?
-	2. ProjectCode2_Creditor: Under which Project2 does this cost belong to? (Internal invoices only)
+	1. ProjectCode2_Debitor: Under which Project2 does this cost belong to?
+	2. ProjectCode2_Creditor: Under which Project2 does this turnover belong to?
