@@ -2,6 +2,7 @@
 sidebar_position: 3
 ---
 
+# Analysis Sample
 Analysis_Samples are the individual (leaf) samples present in an [Analysis_Order](Analysis_Order.md). These samples are grouped together in an [Analysis_SubOrder](Analysis_SubOrder.md)
 
 **Mixed Samples** 

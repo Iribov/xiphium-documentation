@@ -2,6 +2,7 @@
 sidebar_position: 2
 ---
 
+# Analysis Suborder
 Analysis_Suborder is used as a grouping of [Analysis_Samples](Analysis_Sample.md), and a more detailed explanation of an [Analysis_Order](Analysis_Order.md).
 
 ### Core information
