@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Iribov.github.io/xiphium-documentation/blog</id>
     <title>Xiphium Documentation Blog</title>
-    <updated>2024-03-08T00:00:00.000Z</updated>
+    <updated>2024-03-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Iribov.github.io/xiphium-documentation/blog"/>
     <subtitle>Xiphium Documentation Blog</subtitle>
     <icon>https://Iribov.github.io/xiphium-documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Xiphium 2024-W11 update]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update"/>
+        <updated>2024-03-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></summary>
+        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-experiment-scan-menu">TC Experiment Scan Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#tc-experiment-scan-menu" class="hash-link" aria-label="Direct link to TC Experiment Scan Menu" title="Direct link to TC Experiment Scan Menu">​</a></h2>
+<p>The new scanning menu for tissue culture experiments has been put into the live database. This menu is not functional yet, but it's finally out the design phase and into the 'pre'-implementation phase.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>A new tab has been added to the Order Detail screen called 'Related Orders'.</p>
+<p>Method <em><strong>Ord_UpdateRecord</strong></em> has a minor change to take production orders into account.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage5">Stage5<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#stage5" class="hash-link" aria-label="Direct link to Stage5" title="Direct link to Stage5">​</a></h3>
+<p>A few small changes in Order and Greenhouse-Field methods have been made to also accept 'stage5'  instead of only 'repotting'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover">Financial Turnover<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#financial-turnover" class="hash-link" aria-label="Direct link to Financial Turnover" title="Direct link to Financial Turnover">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h3>
+<p>Some work has been done on many of the financial turnover tables. It's too much work/detail to list all changes made (this can be seen on the GitHub), so a short summary is made here. The most notable changes are:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="status">Status<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#status" class="hash-link" aria-label="Direct link to Status" title="Direct link to Status">​</a></h4>
+<p>The status for most/all financial turnover tables has been changed to:</p>
+<ul>
+<li>Prognosis (month is in the future)</li>
+<li>Current (current month)</li>
+<li>Realized (month is in the past)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover-worktype">Financial Turnover WorkType<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#financial-turnover-worktype" class="hash-link" aria-label="Direct link to Financial Turnover WorkType" title="Direct link to Financial Turnover WorkType">​</a></h4>
+<p>The Financial Turnover WorkType tables 'Month' and 'Year' have received some attention. The Update Record methods have been added and/or updated to get some data from other places.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plants-code">Plants Code<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#plants-code" class="hash-link" aria-label="Direct link to Plants Code" title="Direct link to Plants Code">​</a></h2>
+<p>'remarks commercial' is now a searchable filed in Plant Code.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery Items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery Items" title="Direct link to Delivery Items">​</a></h2>
+<p>Part of method <em><strong>DiT_UpdateRecord</strong></em> has been rewritten. The rewritten part tried to get information from the [Clone] table using the plantCloneCode entered in the delivery item.
+Bundled deliveries sometimes have multiple clones bundled, so a delivery_item can't have a plantCloneCode entered.</p>
+<p>The new version of the method takes this into account, and searches the [Delivery_Scanning] for plantCloneCodes and aggregates the results in Delivery_Items.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="miscellaneous">Miscellaneous<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#miscellaneous" class="hash-link" aria-label="Direct link to Miscellaneous" title="Direct link to Miscellaneous">​</a></h2>
+<p>Protocol Component has been removed from the Analysis menu.</p>
+<p>The 'DisplayCode' field in analysis sample can now be edited even after the analysis order is 'locked'. 'DisplayCode' is only used for the [Clone] table, so this has no effect on the Analysis Results whatsoever.</p>
+<p>Method <em><strong>filterOnDisplayedFields</strong></em> has been added. This method can filter a 'classic' form using a text input, and searching all fields displayed in the current tab of the List Form. Finding all records that have a value in a displayed field that (partially) matches the text input.</p>
+<p>Method <em><strong>Web_PhotosGetCategories</strong></em> now has a new category:
+<code>{"id": "delivery-item-experiment", "name": "Delivery item experiment GF", "prefix": "Experiment"}</code>. Its seems to be preparation for pictures taken in the greenhouse that have to be linked back to a TC Experiment.</p>
+<p>Button 'vScan_Btn_Close7' has been added to the Delivery Note detail form. The button contains code that 'Imports Feedback Form info into records from the clipboard (tab delimited text)'.</p>]]></content>
+        <author>
+            <name>Jim Kerver</name>
+            <uri>https://github.com/Jim-Kerver</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Xiphium 2024-W10 update]]></title>
         <id>https://Iribov.github.io/xiphium-documentation/blog/2024/03/08/Xiphium-W10-Update</id>
