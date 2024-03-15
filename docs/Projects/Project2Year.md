@@ -9,6 +9,8 @@ A budget can be set for a Project2_Year. Besides being insightful, it does not h
 1. Budget A
 2. Budget B
 
+> There is also a 'Budget Order'. This field searches for Orders of this Project2 and Year, and sums the cost (calculation) from those Orders. This is not considered actual budget, but can be used as an indication of what the budget might be.
+
 ### 1. Budget A
 'Budget A' is comprised of 2 budgets:
 1. Budget Extern

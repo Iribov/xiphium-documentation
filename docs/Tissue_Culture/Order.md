@@ -9,7 +9,7 @@ The core information of an Order includes:
 - (Expected/Requested) Delivery week
 - (Expected/Requested) Amount of plants
 
-On top of the basic registration of an order, the Order table also tracks lots of different information from related placed. These include\:
+On top of the basic registration of an order, the Order table also tracks lots of different information from related tables. These include:
 - TC planning
 - Delivery
 - Greenhouse
