@@ -57,7 +57,7 @@ By using the 'Create suborder' button in Analysis_Order detail, a suborder can b
 Some clients deliver arbitrary sample grouping ('batches') that have to be respected. This happens mostly with FCM aneuploidy of seeds and PCR-Marker genotyping. There are special import files that can be used to automatically create suborders
 
 ### Automatic creation from sample import
-When using a Sample import file or importing samples from the [Clones](../Tissue_Culture/Clones.md) table, Suborders are automatically created according to the given core information of the samples.
+When using a Sample import file or importing samples from the [Clones](../Plants/Clones.md) table, Suborders are automatically created according to the given core information of the samples.
 
 
 ---
