@@ -4,10 +4,69 @@
         <title>Xiphium Documentation Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Documentation Blog</description>
-        <lastBuildDate>Fri, 15 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W12 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update</guid>
+            <pubDate>Fri, 22 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="menu-experiment-scanning">Menu Experiment Scanning<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#menu-experiment-scanning" class="hash-link" aria-label="Direct link to Menu Experiment Scanning" title="Direct link to Menu Experiment Scanning">​</a></h2>
+<p>Menu Experiment Scanning continues to get improvements. Now, observations can modified in the experiment while in the menu. The observations are then dynamically added to the treatment listbox using the new method <em><strong>ExT_AddObservationsColumns</strong></em>. The base function (scanning and printing for TC) is not fully functional yet.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scan_dialog_planning">Scan_Dialog_Planning<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#scan_dialog_planning" class="hash-link" aria-label="Direct link to Scan_Dialog_Planning" title="Direct link to Scan_Dialog_Planning">​</a></h2>
+<p>If the Planning Group is created before <strong>Current Date</strong>, the Company Code production field is no longer editable in this scanning menu.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery Items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery Items" title="Direct link to Delivery Items">​</a></h2>
+<p>Method <em><strong>DiT_UpdateRecord</strong></em> has received an update that the new part from last week that determines the certification. If a delivery is bundled, multiple clones are 'under' 1 Delivery Item, and the status has to be aggregated in delivery items. The method now skips this step if no clones are found 'under' the Delivery Item.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-qr-code">General QR Code<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#general-qr-code" class="hash-link" aria-label="Direct link to General QR Code" title="Direct link to General QR Code">​</a></h2>
+<p>Method <em><strong>Doc_Show_General_QR_Code</strong></em> is added. This method generates a QR code based on the highlighted record. This method is applicable to any record of any table. This method is one of the preparations for a general Photo scanning app.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="employee-qr-code">Employee QR Code<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#employee-qr-code" class="hash-link" aria-label="Direct link to Employee QR Code" title="Direct link to Employee QR Code">​</a></h2>
+<p>Method <em><strong>HR_PrintLabels_QR</strong></em> is added to create a QR code for an employee. This will make it easier in different scan menu's to log in.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hourregistration">HourRegistration<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#hourregistration" class="hash-link" aria-label="Direct link to HourRegistration" title="Direct link to HourRegistration">​</a></h2>
+<p>Method <em><strong>HR_UpdateRecord</strong></em> has a small change related to the WBSO code. It seems like this code is prone to future changes since the exact (expected) workings are not defined yet.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="qr-code-labels-analytical-lab">QR Code labels analytical Lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#qr-code-labels-analytical-lab" class="hash-link" aria-label="Direct link to QR Code labels analytical Lab" title="Direct link to QR Code labels analytical Lab">​</a></h2>
+<p>The special seperation character "|" that is used in Analytical QR codes to seperate the Table number from the unique identifiers has been replaces with a whitespace " ". This is due to inconsistencies in the generation/printing of the QR Code. Sometimes the "|" would get replaced with a " ", but sometimes it was just removed from the QR code, making it unusable.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project2_year">Project2_Year<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#project2_year" class="hash-link" aria-label="Direct link to Project2_Year" title="Direct link to Project2_Year">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="budget">Budget<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#budget" class="hash-link" aria-label="Direct link to Budget" title="Direct link to Budget">​</a></h3>
+<p>Method <em><strong>Pro2Y_UpdateRecord</strong></em> has been modified to calculate budgets differently than before. The exact workings were discussed and a new version should be implemented soon.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="radio-buttons">Radio buttons<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#radio-buttons" class="hash-link" aria-label="Direct link to Radio buttons" title="Direct link to Radio buttons">​</a></h3>
+<p>Method <em><strong>Pro2Y_RadioB_Ord</strong></em> is added to centralize the radio button behaviour of the 'Order' detail screen of Project2_Year.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="duplicated-fields">Duplicated fields<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#duplicated-fields" class="hash-link" aria-label="Direct link to Duplicated fields" title="Direct link to Duplicated fields">​</a></h3>
+<p>Some duplicated fields in Project2_Year could be removed. These fields have been mostly replaced in the code an layout so that the (connected) Project2 variant is used.
+These fields are:</p>
+<ul>
+<li>Crop Code</li>
+<li>Crop Name</li>
+<li>Company Code</li>
+<li>Company Name</li>
+<li>Worktype
+These fields should never change over the lifetime of the project, so it is not necessary to store them in Project2_Year.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reference-collection-individual">Reference Collection Individual<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#reference-collection-individual" class="hash-link" aria-label="Direct link to Reference Collection Individual" title="Direct link to Reference Collection Individual">​</a></h2>
+<p>The Reference Collection QR code layouts can now be printed for Reference Collection Individual with the help of a popup screen with a drop down button.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-app">Greenhouse App<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#greenhouse-app" class="hash-link" aria-label="Direct link to Greenhouse App" title="Direct link to Greenhouse App">​</a></h2>
+<p>Method <em><strong>Web_PhotosGetCategories</strong></em> has been expanded with 2 new categories:</p>
+<ol>
+<li>Reference Collection</li>
+<li>Experiment-Treatments</li>
+</ol>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$categories.push(New object:C1471("id"; "Reference-Collection"; "name"; "Reference Collection"; "prefix"; ""))</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$categories.push(New object:C1471("id"; "Experiment-Treatments"; "name"; "Experiment Treatments TC (TC Reg Emp Barcode)"; "prefix"; ""))</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Method <em><strong>Web_PhotosSave</strong></em> has also incorporated these 2 new categories.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-print-labels">TC print Labels<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#tc-print-labels" class="hash-link" aria-label="Direct link to TC print Labels" title="Direct link to TC print Labels">​</a></h2>
+<p>Methods <em><strong>Web_TCPrintDuplicateLabels</strong></em> and <em><strong>Web_TCPrintLabels</strong></em> have been modified to use the <em><strong>Scanning_PrintLabelsQR</strong></em> method when default company = '004'.
+In other words: Iribov Ghana will be printing QR code labels for Tissue Culture (as soon as the database there is updated).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="crop">Crop<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#crop" class="hash-link" aria-label="Direct link to Crop" title="Direct link to Crop">​</a></h2>
+<p>The 'Create Record' button for creating a new (unique) crop has been modified. It should be tested for bugs, and replace the 'add record' button.</p>
+<p>The new method <em><strong>filterOnDisplayedFields</strong></em> is now used in the List form by a searchable field. This is useful for searching a crop name in all 3 crop name fields at once (but other displayed fields will be searched too).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover">Financial Turnover<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/22/Xiphium-W12-Update#financial-turnover" class="hash-link" aria-label="Direct link to Financial Turnover" title="Direct link to Financial Turnover">​</a></h2>
+<p>The financial turnover tables have had many modification. Many layout modifications have been done.
+various 'Distribute Turnover' buttons have been added
+'Create Months' button has been added for Financial Turnover Worktype Year</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W11 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update</link>
