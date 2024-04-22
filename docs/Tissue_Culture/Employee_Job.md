@@ -1,0 +1,2 @@
+# Employee Job
+While scanning, all [Mutations_Employee](Mutations_Employee.md) and newly created [TC_Reg_Emp](TC_Reg_Emp.md) are connected to the overarching Employee Job. The Employee Job also keeps track of scanning time so it can give a suggestion in [HR_Detail](../Projects/HR_Detail.md) when entering hours.
