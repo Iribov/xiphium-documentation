@@ -68,7 +68,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Xiphium Documentation',
+        title: 'Xiphium',
         logo: {
           alt: 'Iribov Logo',
           src: 'img/logo.svg',
