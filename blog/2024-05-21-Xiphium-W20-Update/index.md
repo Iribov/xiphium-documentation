@@ -59,10 +59,10 @@ Scanning menu for deliveries now also fills the company name in the Delivery Not
 
 Method ***DeN_ExportToTC2EScanning*** now also calls the ***Clo_UpdateRecord*** when creating a new Clone.
 
-Method ***DiT_UpdateRecord*** now also searches for delivery items of the same Order and sums up the amount of plants of these delivery items and calculated the difference of this sum with the maount of plants ordered. This should give a better view if the Order has been fulfilled or not.
+Method ***DiT_UpdateRecord*** now also searches for delivery items of the same Order and sums up the amount of plants of these delivery items and calculates the difference of this sum with the amount of plants ordered. This should give a better view if the Order has been fulfilled or not.
 
 ## Greenhouse-Field
-Object method has been added to From 'Scan_Dialog_EnterDeliveryGF' object 'vScan_Btn_Close5' that seems to take information from the clipboard and creates Mutation_Employee records for Greenhouse-Fields records.
+Object method has been added to Form 'Scan_Dialog_EnterDeliveryGF' object 'vScan_Btn_Close5' that seems to take information from the clipboard and creates Mutation_Employee records for Greenhouse-Fields records.
 
 ## Complaints
 Method ***AL_ExportExcelComplaints*** has been added to export complaints to an Excel file.
