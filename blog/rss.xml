@@ -4,10 +4,80 @@
         <title>Xiphium Documentation Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Documentation Blog</description>
-        <lastBuildDate>Fri, 31 May 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Jun 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W23 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update</guid>
+            <pubDate>Fri, 07 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="query-optimization">Query Optimization<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#query-optimization" class="hash-link" aria-label="Direct link to Query Optimization" title="Direct link to Query Optimization">​</a></h2>
+<p>Method <em><strong>AnIsoPlate_CreateRecord_PCR</strong></em> has had a query optimization where the '.orderBy()' function has been incorperated into the query call. This optimizes performance since now, the query call returns the entitySelection already ordered, instead of needing to do an additional server request with the .orderBy function.</p>
+<p>Reducing the network calls from 2 to 1 makes this query about 2x as fast. Queries and data communications between server and client are often the slowest parts of our code. Optizing these parts will make the methods run faster. This is even more true when connecting to Xiphium via VPN!</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Details</summary><div><div class="collapsibleContent_i85q"><p></p><summary>Code change</summary>
+old code (2 server requests):<p></p><div class="language-4D language-4d codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$selection:=ds:C1482.Analysis_Isolation_Plate.query("AnIsoPlate_PlateName = :1"; $year+"-@")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$selection:=$selection.orderBy("AnIsoPlate_PlateName")</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>new code (1 server request):</p><div class="language-4D language-4d codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$selection:=ds:C1482.Analysis_Isolation_Plate.query("AnIsoPlate_PlateName = :1 order by AnIsoPlate_PlateName asc"; $year+"-@")</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Combining the 'query' and 'Order By' into a single network request is NOT possible using classic 4D code.</p></div></div></div></div></details>
+<p>Method <em><strong>AnIso_SelectForDetail</strong></em> has been optimized to directly query using ORDA, instead of doing a classic Query and converting it to ORDA using 'Create Entity Selection' (however, the 'Create Entity Selection' line still needs to be removed).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-note">Delivery Note<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#delivery-note" class="hash-link" aria-label="Direct link to Delivery Note" title="Direct link to Delivery Note">​</a></h2>
+<p>Methods <em><strong>DeN_Create_PDF_AN_GF</strong></em> and <em><strong>DeN_Create_PDF_DN_GF</strong></em> have been added. The methods create some kind of report of the Delivery Note</p>
+<p>Method <em><strong>DeN_Detail_ListboxHandler</strong></em> is added. The method handles the custom events "On Filter" and "On Tools Button".</p>
+<p>Method <em><strong>DeN_ExportExcel_Pending</strong></em> has been added. This method exports DeliveryNote fields of the current selection.</p>
+<p>Method <em><strong>DeN_Print_Address_Label</strong></em> has been added. This method print the Address Label using the "DeN_Print_AddressLabel12" tableform and functions 'FORM SET OUTPUT' and 'PRINT RECORD'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="documents">Documents<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#documents" class="hash-link" aria-label="Direct link to Documents" title="Direct link to Documents">​</a></h2>
+<p>Method <em><strong>Doc_ShowDetailFormPreview</strong></em> has been added. This method can show a preview of documents in a seperate window.</p>
+<p>Methods <em><strong>File_CanPreviewInWebArea</strong></em> and <em><strong>File_GetMimeType</strong></em> have been extended with the "heic" extension. This means that files with this extension can now be previewed using method <em><strong>Doc_ShowDetailFormPreview</strong></em>.</p>
+<p>Form "Doc_ListFormPreview2" has new buttons 'DocumentIcon' and 'DownloadButton'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="experiment">Experiment<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#experiment" class="hash-link" aria-label="Direct link to Experiment" title="Direct link to Experiment">​</a></h2>
+<p>Method <em><strong>Exp_UpdateRecord</strong></em> now searches for documents related to its treatments and saves the amount found in field 'Exp_Rec_Doc_ExT'.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="treatment">Treatment<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#treatment" class="hash-link" aria-label="Direct link to Treatment" title="Direct link to Treatment">​</a></h3>
+<p>Method <em><strong>ExT_UpdateRecord</strong></em> has been adjusted so that Obervation Percentage fields are now calculated using the 'ExT_N1_Explants' field instead of the 'ExT_N2_Plant_Analysed'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fincancial">Fincancial<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#fincancial" class="hash-link" aria-label="Direct link to Fincancial" title="Direct link to Fincancial">​</a></h2>
+<p>Some work has been done on the financial tables. It's too much effort to write down all the changes, but changes have been made to methods:</p>
+<ol>
+<li>FinCM_Sum</li>
+<li>FinCM_UpdateRecord</li>
+<li>FinT_CCM_UpdateRecord</li>
+<li>FinT_CCT_UpdateRecord</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tcpa">TCPA<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#tcpa" class="hash-link" aria-label="Direct link to TCPA" title="Direct link to TCPA">​</a></h2>
+<p>Method <em><strong>TCPA_SyncExportDelitemsResults</strong></em> has field 'DiT_N_17_Del_NoInfo' added to its massive oneline QUERY BY FORMULA. This line finds all records with any amount of plants in any of the given fields, and/or if it has any text in field 'DiT_Q_Remarks'.</p>
+<p>Method <em><strong>TCPA_SyncExportTCPlanGroups</strong></em> has been changed to export the last 2 weeks instead of the last 5 days.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-stuff">Web stuff<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#web-stuff" class="hash-link" aria-label="Direct link to Web stuff" title="Direct link to Web stuff">​</a></h2>
+<p>Method <em><strong>WebApp_Startup</strong></em> has 2 'locations' API endpoints modified to use method <em><strong>Web_LocationsController</strong></em> instead of <em><strong>Web_TCLocationsController</strong></em>.</p>
+<p>Method <em><strong>Web_LocationsController</strong></em> has been added. This method is used in API in both the 'tc-locations' and the newer 'locations' endpoints.</p>
+<p>Methods <em><strong>Web_LocationsControllerNew</strong></em>, <em><strong>Web_LocationsGetAllLocations</strong></em>, <em><strong>Web_LocationsGetJar</strong></em>, <em><strong>Web_LocationsSaveJar</strong></em>, <em><strong>Web_LocationsGetLocation</strong></em>, <em><strong>Web_LocationsRefreshScanData</strong></em>, <em><strong>Web_LocationsSaveScanData</strong></em>, <em><strong>Web_LocationsUploadScanData</strong></em> have been added. These methods probably add a lot of functionality to the locations app.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clone">Clone<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#clone" class="hash-link" aria-label="Direct link to Clone" title="Direct link to Clone">​</a></h2>
+<p>The 'Create Record' buttons that call the "Clo_Create_Record_Screen" Form now also auto fill the plantcode when no Clone is selected, but a Plant_Code record is in the current selection. This should make it easier to create new clones without typos in the Plant Code. Not all subforms have a 'create record' button, but they all do have an 'add record' button.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="catalog-changes">Catalog changes<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/07/Xiphium-W23-Update#catalog-changes" class="hash-link" aria-label="Direct link to Catalog changes" title="Direct link to Catalog changes">​</a></h2>
+<p>Catalog changes indicate changes in the database structure. These could be:</p>
+<ul>
+<li>Field changes (additions, renaming, removal)</li>
+<li>Index changes</li>
+<li>Table changes</li>
+</ul>
+<p>Table [Fin_Com_Month] has a lot of changes in its fields. Fields "FinCM_E01_MC" to "FinCM_E27_MC" have been retyped from Alpha to Real.</p>
+<p>Table [FinTur_ComCrop_Tot] has 'Field_52' renamed to 'FinTurCCT_ComCode_Prod_MC'</p>
+<p>Several new indexes have been added:</p>
+<ul>
+<li>[TC_Registration]TC2_GroupCode_From</li>
+<li>[TC_Registration]TC2_TableFrom</li>
+<li>[Mutations_Employee]MuEm_TC2_TableFrom</li>
+<li>[Mutations_Employee]MuEm_Start_N_Plants</li>
+<li>[Mutations_Employee]MuEm_ID_TC2_To</li>
+<li>[Greenhouse_Field]GF_GroupFrom</li>
+<li>[Greenhouse_Field]GF_TableFrom</li>
+<li>[GF_Reservations]GFRes_N_Trays</li>
+<li>[Delivery_Boxes]DeBo_DeliveryNote</li>
+<li>[Delivery_Items]DiT_N_Plant</li>
+<li>[Delivery_Items]DiT_Location_Temp_GF_Delivery</li>
+<li>[Invoice_Items]InD_Description_D01_GCFrom</li>
+<li>[Order]Ord_N_Plant_Open</li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W22 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/05/31/Xiphium-W22-Update</link>
