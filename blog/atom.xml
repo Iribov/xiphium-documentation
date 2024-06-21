@@ -2,11 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Iribov.github.io/xiphium-documentation/blog</id>
     <title>Xiphium Documentation Blog</title>
-    <updated>2024-06-14T00:00:00.000Z</updated>
+    <updated>2024-06-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Iribov.github.io/xiphium-documentation/blog"/>
     <subtitle>Xiphium Documentation Blog</subtitle>
     <icon>https://Iribov.github.io/xiphium-documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Xiphium 2024-W25 update]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update"/>
+        <updated>2024-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></summary>
+        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>This week had quite some changes. Most changes are made to forms, which will not be covered here. Only Project form and Project Method changes will be discussed here.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="experiments">Experiments<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#experiments" class="hash-link" aria-label="Direct link to Experiments" title="Direct link to Experiments">​</a></h2>
+<p>New detail tab added to Experiment called 'Documents DiT'.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="treatments">Treatments<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#treatments" class="hash-link" aria-label="Direct link to Treatments" title="Direct link to Treatments">​</a></h3>
+<p>New detail logic added to Treatment detail (method <em><strong>ExT_SelectForDetail</strong></em>). Page 4 and 5 search for related docuements. Page 6 searches for related Delivery_item and its documents.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scan-menu">Scan Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#scan-menu" class="hash-link" aria-label="Direct link to Scan Menu" title="Direct link to Scan Menu">​</a></h3>
+<p>The scan menu for experiment is broken up into separate forms. This makes handling the logic of each screen more digestible and readable. This did introduce some bugs that are (mostly) addressed and fixed.</p>
+<p>Method <em><strong>Scanning_ClosePrinting</strong></em> is now also able to connect TC_Reg_Emp and Exp_Treatments based on their IDM relationship.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deliveries">Deliveries<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#deliveries" class="hash-link" aria-label="Direct link to Deliveries" title="Direct link to Deliveries">​</a></h2>
+<p>Method <em><strong>DeN_CreateInvoice</strong></em> has the following line commented out:
+<code>[Invoice_Items]InD_Description_D_Print_4:=[Purchase_Articles]PuArt_Group1</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery Items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery Items" title="Direct link to Delivery Items">​</a></h3>
+<p>Method <em><strong>DiT_ExportDel_Cust_Feedb_2045</strong></em> has received some changes.
+"Plants Received" is now "Plants Pending1" and is calculated using an excel formula. "Plants Accepted" is now calculated using a formula if the field equals 0. Probably to catch instances where it is 'forgotten' to be filled in.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse">GreenHouse<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#greenhouse" class="hash-link" aria-label="Direct link to GreenHouse" title="Direct link to GreenHouse">​</a></h2>
+<p>Method <em><strong>GF_UpdateRecord</strong></em> now has an <code>UNLOAD RECORD([Order])</code> line added to not block any [Order] records.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>Method <em><strong>Ord_ExportExcel_Flex</strong></em> now has an extra option to include 'week request'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project2">Project2<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#project2" class="hash-link" aria-label="Direct link to Project2" title="Direct link to Project2">​</a></h2>
+<p>Method <em><strong>Pro2_ExportExcel_Flex</strong></em> has been reworked to actually work.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#analytical-lab" class="hash-link" aria-label="Direct link to Analytical lab" title="Direct link to Analytical lab">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reference-collection">Reference Collection<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#reference-collection" class="hash-link" aria-label="Direct link to Reference Collection" title="Direct link to Reference Collection">​</a></h3>
+<p>Detail screen of reference collection now also searches related documents.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-plan-group">TC Plan Group<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#tc-plan-group" class="hash-link" aria-label="Direct link to TC Plan Group" title="Direct link to TC Plan Group">​</a></h2>
+<p>Method <em><strong>TCPG_ExportExcel_Flex</strong></em> seems to be expanded with a new option (or options). The exact changes are hard to read from the code diff.</p>
+<p>Method <em><strong>TCPG_UpdateRecord</strong></em> line 139 has been adjusted. The search for delivery items now excludes delivery items that are being delivered to comcode 001. This is done so that the field [TC_Plan_Group]TCPG_N_StartPlants_Delivered does not include plants sent to Iribov NL.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>The adjusted query in question is the following:</p><div class="language-4D language-4d codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$productionLoc:=[TC_Plan_Group]TCPG_ComCode_ProductionLoc</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$dit:=ds.Delivery_Items.query("Dit_Pla_PlantCode = :1 and DiT_ComCode_Delivery_To # :2 and DiT_ComCode_Delivery_To # :3"; vplantcode; $productionLoc; "001")</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>The new addition of the third parameter is intended to exclude internal deliveries to be counted as 'delivered plants'. Note that internal deliveries from Ghana to Macedonia will still be counted as 'plants delivered'.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-stuff">Web Stuff<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#web-stuff" class="hash-link" aria-label="Direct link to Web Stuff" title="Direct link to Web Stuff">​</a></h2>
+<p>Method <em><strong>000_TestRL</strong></em> has the following methods added to it: <em><strong>Doc_AddDocument</strong></em>,
+<em><strong>Doc_AddDocumentWeb</strong></em>, <em><strong>CronTask_StartDaemon</strong></em> and <em><strong>App_OnStartup</strong></em>.</p>
+<p>Method <em><strong>App_OnStartup</strong></em> has removed the method <em><strong>CronTask_StartDaemon</strong></em> when 4D is in local mode. This change has been done to only let cronstasks run if Xiphium is running on a server, and not while running locally (for testing/developing).</p>
+<p>Method <em><strong>Web_LocationsUploadScanData</strong></em> has been adjusted. It seems like the method got some extra error handling needed for practical use.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="documents">Documents<a href="https://iribov.github.io/xiphium-documentation/blog/2024/06/21/Xiphium-W25-Update#documents" class="hash-link" aria-label="Direct link to Documents" title="Direct link to Documents">​</a></h3>
+<p>Method <em><strong>Doc_ConvertDocument</strong></em> has been added to convert .HEIC files to .JPG. This is because support for the .HEIC format is not widespread enough (yet).</p>
+<p>Methods <em><strong>Doc_AddDocument</strong></em> and <em><strong>Doc_ReplaceDocument</strong></em> now automatically converts .HEIC files to .JPG using the new <em><strong>Doc_ConvertDocument</strong></em> method.</p>]]></content>
+        <author>
+            <name>Jim Kerver</name>
+            <uri>https://github.com/Jim-Kerver</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Xiphium 2024-W24 update]]></title>
         <id>https://Iribov.github.io/xiphium-documentation/blog/2024/06/14/Xiphium-W24-Update</id>
@@ -1099,37 +1147,6 @@ The field also changes color depending on the contents of that field (Green when
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="temperature-format">Temperature format<a href="https://iribov.github.io/xiphium-documentation/blog/2024/02/02/Xiphium-W05-Update#temperature-format" class="hash-link" aria-label="Direct link to Temperature format" title="Direct link to Temperature format">​</a></h2>
 <p>The 'TemperatureFormat' is added to the formatting options for displaying Temperatures. This format is used for integers only (no commas), and will show the <code>℃</code> symbol behind the (stored) integer.</p>
 <p>Example: '12' will be shown as '12℃' when using this format.</p>]]></content>
-        <author>
-            <name>Jim Kerver</name>
-            <uri>https://github.com/Jim-Kerver</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Xiphium 2024-W04 update]]></title>
-        <id>https://Iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index</id>
-        <link href="https://Iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index"/>
-        <updated>2024-01-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Github.]]></summary>
-        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Github.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse-sorting-scanning-menu">Greenhouse Sorting Scanning Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#greenhouse-sorting-scanning-menu" class="hash-link" aria-label="Direct link to Greenhouse Sorting Scanning Menu" title="Direct link to Greenhouse Sorting Scanning Menu">​</a></h2>
-<p>Some small changes have been made to the Greenhouse sorting scanning menu. It is now possible to add a remark to the sorting!</p>
-<p>The popup 'GF_Reason_Not_Planted_Machine' has been modified with some extra options and changes to current options.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-month-liquidity">Financial Month (liquidity)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#financial-month-liquidity" class="hash-link" aria-label="Direct link to Financial Month (liquidity)" title="Direct link to Financial Month (liquidity)">​</a></h2>
-<p>The Financial Month (called Fin_Liq_Month a.k.a. 'Financial Liquidity Month' on the background) has gotten a new tab added to its list form named 'Creditor'. 15 fields have been added that are supposed to track the Open and Overdue amounts+Percentages op debitors.</p>
-<p>Also, some updates have been made to the 'Update Record' method. The intension of this change is unclear but it seems to improve current queries.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover-month">Financial turnover month<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#financial-turnover-month" class="hash-link" aria-label="Direct link to Financial turnover month" title="Direct link to Financial turnover month">​</a></h2>
-<p>Some fields have been added to the Financial turnover month table that track the Debitors Open Percentage and Debitor Overdue PErcentage of both the debitor company and the debitor mother company.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-order">Analysis Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#analysis-order" class="hash-link" aria-label="Direct link to Analysis Order" title="Direct link to Analysis Order">​</a></h2>
-<p>The Analysis Order detail screen has been subject to change according to feedback from the ISO evaluation. Unused button will be removed, and used buttons will be rearranged. If a button has been removed, and you believe it has to come back, please contact the Analytical Lab.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-suborder">Analysis Suborder<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#analysis-suborder" class="hash-link" aria-label="Direct link to Analysis Suborder" title="Direct link to Analysis Suborder">​</a></h2>
-<p>The Analysis suborder code has received some update to automatically create 'Pathogens to test' and 'Markers to Test' links from their respective text fields.</p>
-<p>Also, the 'Update Record' method is currently under construction to remove old/unnecessary code. This should have no effect on daily operations but if there are, contact IT immediately!</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-note">Delivery Note<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#delivery-note" class="hash-link" aria-label="Direct link to Delivery Note" title="Direct link to Delivery Note">​</a></h2>
-<p>A small change has been made to the 'Update Record' method that automatically enters an employee code and employee name of the account manager involved in the delivery note. The account manager is automatically entered by searching in the Company table with the company code customer from the delivery note.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
-<p>A small change has been made to the 'Update Record' method optimizing the way company production is taken from order group.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="iribov-in-brasil">Iribov in Brasil!<a href="https://iribov.github.io/xiphium-documentation/blog/2024/01/26/Xiphium-W04-Update/Index#iribov-in-brasil" class="hash-link" aria-label="Direct link to Iribov in Brasil!" title="Direct link to Iribov in Brasil!">​</a></h2>
-<p>The TCPA_SyncExportOrders method now has lines added that take Company code 006, and country 'Brasil' into account.</p>]]></content>
         <author>
             <name>Jim Kerver</name>
             <uri>https://github.com/Jim-Kerver</uri>
