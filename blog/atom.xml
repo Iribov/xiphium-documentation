@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Iribov.github.io/xiphium-documentation/blog</id>
-    <title>Xiphium Documentation Blog</title>
+    <title>Xiphium Blog</title>
     <updated>2024-06-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Iribov.github.io/xiphium-documentation/blog"/>
-    <subtitle>Xiphium Documentation Blog</subtitle>
+    <subtitle>Xiphium Blog</subtitle>
     <icon>https://Iribov.github.io/xiphium-documentation/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Xiphium 2024-W25 update]]></title>

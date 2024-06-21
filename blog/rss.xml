@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Xiphium Documentation Blog</title>
+        <title>Xiphium Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
-        <description>Xiphium Documentation Blog</description>
+        <description>Xiphium Blog</description>
         <lastBuildDate>Fri, 21 Jun 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
