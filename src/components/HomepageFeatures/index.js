@@ -4,12 +4,12 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Specialized in Tissue Culture',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Xiphium is developed with tissue culture as primary purpose. 
+        Making it a highly specialized tool for tissue culture companies.
       </>
     ),
   },
@@ -18,18 +18,16 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Xiphium lets you focus on your tissue culture production. We'll make sure everyone is up to date with the same data, so your whole company knows what to do.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powered by Iribov',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Iribov is a tissue company itself, so we know what you need. We keep developing Xiphium to make it better for everyone.
       </>
     ),
   },

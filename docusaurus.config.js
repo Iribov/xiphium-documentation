@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Xiphium Documentation',
-  tagline: 'Let\'s build this documentation site together',
+  title: 'Xiphium',
+  tagline: 'The Tissue Culture ERP of Iribov',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -80,7 +80,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'}, {to: '/about-us', label: 'About Us', position: 'left'},
           {
             href: 'https://github.com/Iribov/xiphium-documentation',
             label: 'GitHub',
