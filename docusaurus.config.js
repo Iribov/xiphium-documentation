@@ -83,13 +83,16 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'}, {to: '/about-us', label: 'About Us', position: 'left'},
           {
             href: 'https://github.com/Iribov/xiphium-documentation',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            title: 'Github repository',
+            'area-label': 'Github repository'
           },
           {
             href: 'https://Iribov.com',
-            label: 'Iribov',
             position: 'right',
+            className: 'header-iribov-link',
+            title: 'Iribov Website',
           },
         ],
       },
@@ -110,7 +113,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Socials',
             items: [
               {
                 label: 'Linkedin',
