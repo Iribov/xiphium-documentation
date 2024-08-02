@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by Iribov',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
         Iribov is a tissue company itself, so we know what you need. We keep developing Xiphium to make it better for everyone.
