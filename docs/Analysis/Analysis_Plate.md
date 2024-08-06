@@ -1,3 +1,6 @@
+---
+sidebar_position: 9
+---
 # Analysis Plate
 Analysis Plate is the plate (layout) used for Analysis. Similar to [Analysis Isolation Plate](Analysis_Isolation_Plate.md), the record itself only contains basic information of the plate. The actual plate Layout is stored in the [Analysis Datapoint](Analysis_DataPoint.md) records.
 
