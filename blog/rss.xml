@@ -4,10 +4,73 @@
         <title>Xiphium Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Blog</description>
-        <lastBuildDate>Fri, 02 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 09 Aug 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W32 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index</guid>
+            <pubDate>Fri, 09 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="i-declare-to-use-declare">I declare to use #DECLARE<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#i-declare-to-use-declare" class="hash-link" aria-label="Direct link to I declare to use #DECLARE" title="Direct link to I declare to use #DECLARE">​</a></h2>
+<p>4D has the new #DECLARE syntax to replace the classic $0, $1, $2 syntax for method parameters. In 4D 20R4 the #DECLARE replaces the need for the <em><strong>Compiler_</strong></em> methods. It is recommended to use the #DECLARE syntax for this reason but also, the declaration of the function is displayed in the status bar exactly as it is for 4D commands.</p>
+<p>For this reason I propose that when making adjustments to a method, to also replace the classic parameter declarations with the #DECLARE syntax.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Keep in mind that the parameters declared with the #DECLARE are always initialized to their default data type (integer defaults to 0, Text defaults to "", etc.</p><p>Checking if a parameter is passed to the method should be done using the <strong>Count parameters</strong> function and not the <strong>Undefined()</strong> function.</p></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Check out the documentation and blog posts about #DECLARE:</p><p><a href="https://developer.4d.com/docs/Concepts/parameters/#declaring-parameters" target="_blank" rel="noopener noreferrer">Parameters | 4D Docs</a></p><p><a href="https://blog.4d.com/streamlined-method-parameter-declarations/" target="_blank" rel="noopener noreferrer">Streamlined Method Parameter Declarations – 4D Blog</a></p><p><a href="https://blog.4d.com/coder-friendly-syntax-for-class-functions-and-methods/" target="_blank" rel="noopener noreferrer">Coder-friendly syntax for class functions and methods – 4D Blog</a></p></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="experiment">Experiment<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#experiment" class="hash-link" aria-label="Direct link to Experiment" title="Direct link to Experiment">​</a></h2>
+<p>Method <em><strong>Exp_UpdateRecord</strong></em> has been modified to look for related documents using ORDA instead of classic queries.</p>
+<p>Button Dit_Btn_CreateEmail7 has been added to form [Experiments]:"Exp_Detail". The button seems to export documents to a folder. It seems this is a test to export all treatment pictures at once (which has been a request form researchers).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="experiment-scan-menu">Experiment Scan Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#experiment-scan-menu" class="hash-link" aria-label="Direct link to Experiment Scan Menu" title="Direct link to Experiment Scan Menu">​</a></h3>
+<p>Creating Experiments and treatment via the scan menu did not result in fully 'filled' records.
+The TCPG_ID and Activity Code are now added when creating a treatment. What more data needs to be added to these creation menus must be discussed.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse">Greenhouse<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#greenhouse" class="hash-link" aria-label="Direct link to Greenhouse" title="Direct link to Greenhouse">​</a></h2>
+<p>The following fields have been added:</p>
+<ul>
+<li>GF_Plants_Sorted_Mini_1s</li>
+<li>GF_Plants_Sorted_Small_1st</li>
+<li>GF_Plants_Sorted_Medium_1st</li>
+<li>GF_Plants_Sorted_Large_1st</li>
+<li>GF_Plants_Sorted_Total_1st</li>
+<li>Field_215</li>
+</ul>
+<p>Method <em><strong>GF_ExportExcelReportResults</strong></em> now also includes the newly created fields in its export (except for 'Field-215').</p>
+<p>Button ExT_Btn_Label1 in form [Greenhouse_Field];"GF_List" has been modified. The following code has been added:</p>
+<div class="language-4D language-4d codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">If (([Greenhouse_Field]GF_Plants_Sorted_Mini_1st+[Greenhouse_Field]GF_Plants_Sorted_Small_1st+[Greenhouse_Field]GF_Plants_Sorted_Medium_1st+[Greenhouse_Field]GF_Plants_Sorted_Large_1st+[Greenhouse_Field]GF_Plants_Sorted_Total_1st)=0)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[Greenhouse_Field]GF_Plants_Sorted_Mini_1st:=[Greenhouse_Field]GF_N_Plants_Sorting_Mini</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[Greenhouse_Field]GF_Plants_Sorted_Small_1st:=[Greenhouse_Field]GF_N_Plants_Sorting_Small</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[Greenhouse_Field]GF_Plants_Sorted_Medium_1st:=[Greenhouse_Field]GF_N_Plants_Sorting_Medium</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[Greenhouse_Field]GF_Plants_Sorted_Large_1st:=[Greenhouse_Field]GF_N_Plants_Sorting_Large</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[Greenhouse_Field]GF_Plants_Sorted_Total_1st:=[Greenhouse_Field]GF_N_Plants_Sorting_Total</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">End if </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Basically, all the newly created 'Sorted_x_1st' fields are filled by their respective 'Sorting' fields if none of them were filled yet.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plant-code">Plant Code<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#plant-code" class="hash-link" aria-label="Direct link to Plant Code" title="Direct link to Plant Code">​</a></h2>
+<p>Field [Plant_Code]Plate_zzz_2 has been renamed to [Plant_Code]Pla_Item_ID_Extern.
+Plant Code has received several small updates this week to implement this 'new' field.</p>
+<p>Method <em><strong>Pla_UpdateRecord_Part_AmountLoc</strong></em> now excludes Deleted TCPA's when calculating the 'Plants Present'</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-component">Protocol Component<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#protocol-component" class="hash-link" aria-label="Direct link to Protocol Component" title="Direct link to Protocol Component">​</a></h2>
+<p>Field [Protocol_Component]ProtComp_Date_Last_Sync_Import has been added.</p>
+<p>Method <em><strong>ProtComp_DuplicateToLocation</strong></em> has been modified to set the [Prot_Component]ProtComp_Date_Last_Sync_Import to !00-00-00! for the duplicated record.</p>
+<p>Method <em><strong>ProtComp_SyncExportProtComp</strong></em> now sets the[Prot_Component]ProtComp_Date_Last_Sync_Import to <strong>Current date</strong>.</p>
+<p>Method <em><strong>ProtComp_UpdateRecord</strong></em> now converts the saved ComCode to ComCode_Text</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-plan-cycle">TC Plan Cycle<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#tc-plan-cycle" class="hash-link" aria-label="Direct link to TC Plan Cycle" title="Direct link to TC Plan Cycle">​</a></h2>
+<p>Method <em><strong>TCPC_CreateRecords_TCPA_TCPG</strong></em> now only copies remarks to TCPA when the TCPC remark is not empty and appends the TCPC remark to the current TCPA remark.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>The current implementation keeps appending the TCPC remark every time the method is executed!</p><div class="language-4D language-4d codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">If ([TC_Plan_Cycle]TCPC_Remarks1#"")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	[TC_Plan_Action]TCPA_Remarks_Planning:=[TC_Plan_Action]TCPA_Remarks_Planning+" "+[TC_Plan_Cycle]TCPC_Remarks1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">End if </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>Please check lines 78-80, 179-181 and 278-280 if this implementation is desirable.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wbso-projectgroup-and-project2">WBSO (ProjectGroup and Project2)<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#wbso-projectgroup-and-project2" class="hash-link" aria-label="Direct link to WBSO (ProjectGroup and Project2)" title="Direct link to WBSO (ProjectGroup and Project2)">​</a></h2>
+<p>Method <em><strong>WBSO_Pro2_ConnectionDiffReport</strong></em> has been added. This method asks for 2 years and compares every ProjectGroup_Year - Project2_Year connection of these 2 years. This can be useful to see what has changed between 2 years.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>Buttons vScan_Btn_Close8 and vScan_Btn_Close9 have been added to form [Order]:"Ord_List". Both buttons seem to import Order records from the clipboard. There are some changes between the 2 buttons. It has probably been a test.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="maintenance-app">Maintenance app<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#maintenance-app" class="hash-link" aria-label="Direct link to Maintenance app" title="Direct link to Maintenance app">​</a></h2>
+<p>Method <em><strong>Web_MaintenanceController</strong></em> has a new action called "maintenance" with method "GET". This option calls the method <em><strong>Web_MaintenanceGetEquipment</strong></em>, which returns details of the given equipment ID. Part of <em><strong>Web_MaintenanceGetEquipment</strong></em> has been abstracted to new method <em><strong>Web_MaintenanceGetMaintenance</strong></em>. This method converts the equipment maintenance record to an object.</p>
+<p>Method <em><strong>Web_MaintenanceSaveMaintenance</strong></em> has been modified to fix bugs and improve functionality.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="misc">Misc<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#misc" class="hash-link" aria-label="Direct link to Misc" title="Direct link to Misc">​</a></h2>
+<ul>
+<li>Method <em><strong>DateTime_ConvertfromISODate</strong></em> has been modified. There is now a check if the date and time pointers are not <strong>Null</strong> before assigning a value to them.</li>
+<li>Method <em><strong>DateTime_ToISODate</strong></em> now accepts a placeholder for when the date would be !00-00-00!</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="meme-of-the-week">Meme of the week<a href="https://iribov.github.io/xiphium-documentation/blog/2024/08/09/Xiphium-W32-Update/Index#meme-of-the-week" class="hash-link" aria-label="Direct link to Meme of the week" title="Direct link to Meme of the week">​</a></h2>
+<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/dbFinalForm-a2a259408ba1fc0a758530114f0e39ba.jpg" width="817" height="628" class="img_ev3q">
+<em>Meme of the week is NOT a recurrent theme and is only instantiated whenever I feel like it.</em></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W31 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/08/02/Xiphium-W31-Update/Index</link>
@@ -1068,47 +1131,6 @@ In other words: Iribov Ghana will be printing QR code labels for Tissue Culture 
 <p>The financial turnover tables have had many modification. Many layout modifications have been done.
 various 'Distribute Turnover' buttons have been added
 'Create Months' button has been added for Financial Turnover Worktype Year</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Xiphium 2024-W11 update]]></title>
-            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update</link>
-            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update</guid>
-            <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
-            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-experiment-scan-menu">TC Experiment Scan Menu<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#tc-experiment-scan-menu" class="hash-link" aria-label="Direct link to TC Experiment Scan Menu" title="Direct link to TC Experiment Scan Menu">​</a></h2>
-<p>The new scanning menu for tissue culture experiments has been put into the live database. This menu is not functional yet, but it's finally out the design phase and into the 'pre'-implementation phase.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
-<p>A new tab has been added to the Order Detail screen called 'Related Orders'.</p>
-<p>Method <em><strong>Ord_UpdateRecord</strong></em> has a minor change to take production orders into account.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage5">Stage5<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#stage5" class="hash-link" aria-label="Direct link to Stage5" title="Direct link to Stage5">​</a></h3>
-<p>A few small changes in Order and Greenhouse-Field methods have been made to also accept 'stage5'  instead of only 'repotting'.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover">Financial Turnover<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#financial-turnover" class="hash-link" aria-label="Direct link to Financial Turnover" title="Direct link to Financial Turnover">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h3>
-<p>Some work has been done on many of the financial turnover tables. It's too much work/detail to list all changes made (this can be seen on the GitHub), so a short summary is made here. The most notable changes are:</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="status">Status<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#status" class="hash-link" aria-label="Direct link to Status" title="Direct link to Status">​</a></h4>
-<p>The status for most/all financial turnover tables has been changed to:</p>
-<ul>
-<li>Prognosis (month is in the future)</li>
-<li>Current (current month)</li>
-<li>Realized (month is in the past)</li>
-</ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="financial-turnover-worktype">Financial Turnover WorkType<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#financial-turnover-worktype" class="hash-link" aria-label="Direct link to Financial Turnover WorkType" title="Direct link to Financial Turnover WorkType">​</a></h4>
-<p>The Financial Turnover WorkType tables 'Month' and 'Year' have received some attention. The Update Record methods have been added and/or updated to get some data from other places.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plants-code">Plants Code<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#plants-code" class="hash-link" aria-label="Direct link to Plants Code" title="Direct link to Plants Code">​</a></h2>
-<p>'remarks commercial' is now a searchable filed in Plant Code.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery-items">Delivery Items<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#delivery-items" class="hash-link" aria-label="Direct link to Delivery Items" title="Direct link to Delivery Items">​</a></h2>
-<p>Part of method <em><strong>DiT_UpdateRecord</strong></em> has been rewritten. The rewritten part tried to get information from the [Clone] table using the plantCloneCode entered in the delivery item.
-Bundled deliveries sometimes have multiple clones bundled, so a delivery_item can't have a plantCloneCode entered.</p>
-<p>The new version of the method takes this into account, and searches the [Delivery_Scanning] for plantCloneCodes and aggregates the results in Delivery_Items.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="miscellaneous">Miscellaneous<a href="https://iribov.github.io/xiphium-documentation/blog/2024/03/15/Xiphium-W11-Update#miscellaneous" class="hash-link" aria-label="Direct link to Miscellaneous" title="Direct link to Miscellaneous">​</a></h2>
-<p>Protocol Component has been removed from the Analysis menu.</p>
-<p>The 'DisplayCode' field in analysis sample can now be edited even after the analysis order is 'locked'. 'DisplayCode' is only used for the [Clone] table, so this has no effect on the Analysis Results whatsoever.</p>
-<p>Method <em><strong>filterOnDisplayedFields</strong></em> has been added. This method can filter a 'classic' form using a text input, and searching all fields displayed in the current tab of the List Form. Finding all records that have a value in a displayed field that (partially) matches the text input.</p>
-<p>Method <em><strong>Web_PhotosGetCategories</strong></em> now has a new category:
-<code>{"id": "delivery-item-experiment", "name": "Delivery item experiment GF", "prefix": "Experiment"}</code>. Its seems to be preparation for pictures taken in the greenhouse that have to be linked back to a TC Experiment.</p>
-<p>Button 'vScan_Btn_Close7' has been added to the Delivery Note detail form. The button contains code that 'Imports Feedback Form info into records from the clipboard (tab delimited text)'.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
