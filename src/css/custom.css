@@ -17,20 +17,20 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* Only use blue for light mode, dark mode switches automatically lo white text */
+/* Only use blue for light mode, dark mode switches automatically to white text */
 [data-theme='light'] {
   h1{
     color: #022c69 !important;
-  }
+  };
   h2{
     color: #022c69 !important;
-  }
+  };
   h3{
     color: #022c69 !important;
-  }
+  };
   h4{
     color: #022c69 !important;
-  }
+  };
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
