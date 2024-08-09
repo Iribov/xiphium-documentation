@@ -19,16 +19,16 @@
 
 /* Only use blue for light mode, dark mode switches automatically to white text */
 [data-theme='light'] {
-  h1{
+  h1 {
     color: #022c69 !important;
   };
-  h2{
+  h2 {
     color: #022c69 !important;
   };
-  h3{
+  h3 {
     color: #022c69 !important;
   };
-  h4{
+  h4 {
     color: #022c69 !important;
   };
 }
