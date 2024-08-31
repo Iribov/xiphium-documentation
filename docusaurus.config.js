@@ -147,8 +147,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Iribov, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: require('./src/theme/highlight/themes/default4D_Light'),
+        darkTheme: require('./src/theme/highlight/themes/default4D_Dark'),
       },
       algolia: {
         // The application ID provided by Algolia

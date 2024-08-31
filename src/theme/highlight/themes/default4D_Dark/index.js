@@ -1,39 +1,39 @@
 // Converted automatically using ./tools/themeFromVsCode
 var theme = {
   plain: {
-    color: "#bfc7d5",
+    color: "#ffffff",
     backgroundColor: "#292d3e"
   },
   styles: [{
     types: ["comment"],
     style: {
-      color: "rgb(105, 112, 152)",
-      fontStyle: "italic"
+      color: "rgb(143, 143, 143)",
     }
   }, {
     types: ["string", "inserted"],
     style: {
-      color: "rgb(195, 0, 141)"
+      color: "rgb(255, 255, 255)"
     }
   }, {
     types: ["number"],
     style: {
-      color: "rgb(247, 140, 108)"
+      color: "rgb(255, 255, 255)"
     }
   }, {
     types: ["builtin", "char", "constant", "function"],
     style: {
-      color: "rgb(130, 170, 255)"
+      color: "rgb(89, 187, 0)",
+      fontWeight: "bold",
     }
   }, {
     types: ["punctuation", "selector"],
     style: {
-      color: "rgb(199, 146, 234)"
+      color: "rgb(255, 255, 255)"
     }
   }, {
     types: ["variable"],
     style: {
-      color: "rgb(191, 199, 213)"
+      color: "rgb(24, 179, 241)"
     }
   }, {
     types: ["class-name", "attr-name"],
@@ -48,17 +48,19 @@ var theme = {
   }, {
     types: ["operator"],
     style: {
-      color: "rgb(137, 221, 255)"
+      color: "rgb(255, 255, 255)"
     }
   }, {
     types: ["boolean"],
     style: {
-      color: "rgb(255, 88, 116)"
+      color: "rgb(089, 187, 0)",
+      fontWeight: "bold",
     }
   }, {
     types: ["keyword"],
     style: {
-      fontStyle: "italic"
+      color: "rgb(0, 142, 0)",
+      fontWeight: "bold",
     }
   }, {
     types: ["doctype"],
