@@ -77,19 +77,19 @@ The solution was to use regex to match the experiment code to this 'loose' stand
 ```4D
 $maxSequenceNumber:=0
 For each ($experiment; $experiments)
-	If (Match regex:C1019("^\\d{4}-[A-Z]{2}-\\d{1,4}-\\d{1,4}$"; $experiment.Exp_ExperimentCode))  //only count if experiment contains experimet code with format: [Year]-[country 2 character alpha code]-[CropCode]-[sequenceNumber]
-		$splitString:=Split string:C1554($experiment.Exp_ExperimentCode; "-"; sk ignore empty strings:K86:1+sk trim spaces:K86:2)
+	If (Match regex("^\\d{4}-[A-Z]{2}-\\d{1,4}-\\d{1,4}$"; $experiment.Exp_ExperimentCode))  //only count if experiment contains experimet code with format: [Year]-[country 2 character alpha code]-[CropCode]-[sequenceNumber]
+		$splitString:=Split string($experiment.Exp_ExperimentCode; "-"; sk ignore empty strings+sk trim spaces)
 		If ($splitString.length>0)
-			$sequenceNumber:=Num:C11($splitString[$splitString.length-1])  //assume the last part of experiment code is the sequence number
-			$maxSequenceNumber:=New collection:C1472($maxSequenceNumber; $sequenceNumber).max()
+			$sequenceNumber:=Num($splitString[$splitString.length-1])  //assume the last part of experiment code is the sequence number
+			$maxSequenceNumber:=New collection($maxSequenceNumber; $sequenceNumber).max()
 		End if 
 	End if 
 End for each 
 $sequenceNumber:=$maxSequenceNumber+1
-$experimentCode.push(Choose:C955($sequenceNumber<1000; String:C10($sequenceNumber; "000"); String:C10($sequenceNumber)))
+$experimentCode.push(Choose($sequenceNumber<1000; String($sequenceNumber; "000"); String($sequenceNumber)))
 
 //join for experiment code (should be unique)
-Form:C1466.ExperimentCode:=$experimentCode.join("-")
+Form.ExperimentCode:=$experimentCode.join("-")
 ```
 
 :::tip
