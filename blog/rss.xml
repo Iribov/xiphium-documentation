@@ -4,10 +4,79 @@
         <title>Xiphium Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Blog</description>
-        <lastBuildDate>Fri, 30 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Sep 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2024-W35 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index</guid>
+            <pubDate>Fri, 20 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="access">Access<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#access" class="hash-link" aria-label="Direct link to Access" title="Direct link to Access">​</a></h2>
+<p>Methods <em><strong>Access_ChangeCurrentUser</strong></em> has been modified to now also set the user alias.
+We shouldn't need for this user alias because we set 4D's user in the same method, so the functionality of this addition is questionable but probably has a reason.</p>
+<p>Method <em><strong>Tab_SetDelegate</strong></em> has been modified for better tab control.</p>
+<p>Method <em><strong>Tab_SetDelegateListForm</strong></em> has been added. It seems like this was needed to seperate tabs in a List form, and tabs in Detail forms.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cost-calculation">Cost Calculation<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#cost-calculation" class="hash-link" aria-label="Direct link to Cost Calculation" title="Direct link to Cost Calculation">​</a></h2>
+<p>Method <em><strong>CosCal_Calc_B2</strong></em> has been modified to round off the cost to 2 decimal places.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="crontask">CronTask<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#crontask" class="hash-link" aria-label="Direct link to CronTask" title="Direct link to CronTask">​</a></h2>
+<p>Method <em><strong>CronTask_ExportExcel</strong></em> has been added. The method</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="documents">Documents<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#documents" class="hash-link" aria-label="Direct link to Documents" title="Direct link to Documents">​</a></h2>
+<p>Method <em><strong>Doc_ShowListFormPreview</strong></em> has been refactored to not use the automatically created 'UserSet' for using highlighted records, but instead uses the command 'GET HIGHLIGHTED RECORDS' to create a set.</p>
+<p>Delivery Items detail form 'Dit_Detail' had a manual tab control (hard coded) that now seems to be replaced with a more general method.</p>
+<p>Delivery Items detail form 'DiT_List_Subform_DeN_Quality' now (only?) shows the document preview when the control button is being pressed while changing the selection.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial">Financial<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#financial" class="hash-link" aria-label="Direct link to Financial" title="Direct link to Financial">​</a></h2>
+<p>Method <em><strong>FinLeC_SelectForDetail</strong></em> has been modified to find Ledgers (FinLed_Total) and Purchase_Articles based on Ledger Code.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-fields">New Fields<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#new-fields" class="hash-link" aria-label="Direct link to New Fields" title="Direct link to New Fields">​</a></h3>
+<p>3 'empty' fields in FinLed_Codes have been renamed to:
+FinLeC_Amount_01-12
+FinLeC_Amount_12-24
+FinLeC_Amount_25-36</p>
+<p>9 extra fields have been added, of which 3 are left 'empty':</p>
+<ol>
+<li>FinLeC_Am_Pur_01_12</li>
+<li>FinLeC_Am_Pur_13_24</li>
+<li>FinLeC_Am_Pur_25_36</li>
+<li>FinLeC_Am_Saldo_01_12</li>
+<li>FinLeC_Am_Saldo_13_24</li>
+<li>FinLeC_Am_Saldo_25_36</li>
+</ol>
+<p>3 'empty' fields in FinLeG_Codes have been renamed to:</p>
+<ol>
+<li>FinLGC_Am_01_12</li>
+<li>FinLGC_Am_13_24</li>
+<li>FinLGC_Am_25_36</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plant">Plant<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#plant" class="hash-link" aria-label="Direct link to Plant" title="Direct link to Plant">​</a></h2>
+<p>Method <em><strong>Pla_Create_NewRecord</strong></em> has been modified. The method now searches for a 'Cultivar Group' Code and Name via the CropCode and cultivar code origin. The method assumes the CropCode and Cultivar Code combination is unique.</p>
+<p>Method <em><strong>TCPG_ExportExcel_Flex</strong></em> has been modified. The change is hard to see due to the way the diff is presented. It was probably a small change, but Git thinks it was a big change.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-stuff">Web Stuff<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#web-stuff" class="hash-link" aria-label="Direct link to Web Stuff" title="Direct link to Web Stuff">​</a></h2>
+<p>Method <em><strong>000_TestRL</strong></em> has some new methods added:</p>
+<ol>
+<li><em><strong>Constants_Setup</strong></em></li>
+<li><em><strong>WebApp_Startup</strong></em></li>
+<li><em><strong>Web_PurchStockController</strong></em></li>
+<li><em><strong>Tab_GotoPage</strong></em></li>
+<li><em><strong>Tab_SetDelegate</strong></em></li>
+</ol>
+<p>Method <em><strong>Web_LocSettingsSaveLocation</strong></em> has been modified to do a special query if the defaultCompany (i.e. location where Xiphium is running) is '003' or '004'. In these locations, if the given $id is not found in the [Spaces_Detail]SpaD_ID field, the search will try to find records using the [Spaces_Detail]SpaD_BarCode field.</p>
+<p>Method <em><strong>WebApp_Startup</strong></em> now includes an extra line intended for the Purchase Stock app.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="purchase-stock-app">Purchase Stock App<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#purchase-stock-app" class="hash-link" aria-label="Direct link to Purchase Stock App" title="Direct link to Purchase Stock App">​</a></h3>
+<p>It seems like the Purchase Stock App is being integrated into Xiphium. The following methods have been added to facilitate the app:</p>
+<ol>
+<li><em><strong>Web_PurchStockController</strong></em></li>
+<li><em><strong>Web_PurchStockGetStock</strong></em></li>
+<li><em><strong>Web_PurchStockGetUser</strong></em></li>
+<li><em><strong>Web_PurchStockUpdateStock</strong></em></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="constants">Constants<a href="https://iribov.github.io/xiphium-documentation/blog/2024/09/20/Xiphium-W36-Update/Index#constants" class="hash-link" aria-label="Direct link to Constants" title="Direct link to Constants">​</a></h3>
+<p>A new constant has been added called: 'Xiphium Purchase Stock App ID'.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2024-W35 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2024/08/30/Xiphium-W35-Update/Index</link>
@@ -1104,31 +1173,6 @@ The added methods are:</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="simple-export-bugfix">Simple Export bugfix<a href="https://iribov.github.io/xiphium-documentation/blog/2024/04/19/Xiphium-W16-Update#simple-export-bugfix" class="hash-link" aria-label="Direct link to Simple Export bugfix" title="Direct link to Simple Export bugfix">​</a></h2>
 <p>Method <em><strong>00_Simple_Export</strong></em> had a bug where related '1' fields gave an error (but still exported just fine).</p>
 <p>After analysing this part of the code, it seems that the method itself is not capable of exporting '1' fields more than 1 relation away. In other words, it can only export data directly related to the current table.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Xiphium 2024-W15 update]]></title>
-            <link>https://Iribov.github.io/xiphium-documentation/blog/2024/04/12/Xiphium-W15-Update</link>
-            <guid>https://Iribov.github.io/xiphium-documentation/blog/2024/04/12/Xiphium-W15-Update</guid>
-            <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
-            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cleanup">Cleanup<a href="https://iribov.github.io/xiphium-documentation/blog/2024/04/12/Xiphium-W15-Update#cleanup" class="hash-link" aria-label="Direct link to Cleanup" title="Direct link to Cleanup">​</a></h2>
-<p>Several unused Forms, tabs, Objects and Object methods have been removed. This cleans up the directory and forms for a clearer view.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clone-series">Clone Series<a href="https://iribov.github.io/xiphium-documentation/blog/2024/04/12/Xiphium-W15-Update#clone-series" class="hash-link" aria-label="Direct link to Clone Series" title="Direct link to Clone Series">​</a></h2>
-<p>Changes have been made to 'Button2' in form 'Pla_Dialog_Clones'. When creating a clone series using this button, the delivery note and originType are now added to the new Clone as well. Also, it used to be when creating new CloneCodes without specifying an Origin clone, the new CloneCodes were prefixed with a useless "-". This is now fixed.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="leisure">Leisure<a href="https://iribov.github.io/xiphium-documentation/blog/2024/04/12/Xiphium-W15-Update#leisure" class="hash-link" aria-label="Direct link to Leisure" title="Direct link to Leisure">​</a></h2>
-<p>Since not many significant changes have been made to Xiphium this week, let's fill this blog with some programming memes</p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/userDerp-a73d318776985e8b7433fa546c8672aa.jpg" width="640" height="572" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/stubbornProgrammer-dff185b5e53d025a679c03351ff51834.jpg" width="1600" height="900" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/hardLife-05c5e1db2d36aaad6c990ad42199f85c.jpg" width="735" height="800" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/ugh-c3503fada13bc03d22ccfa383181f6c6.jpg" width="600" height="523" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/soTrue-14b48117497c6934bf2a3ebf9d94d648.jpg" width="1600" height="900" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/selfdestructive-d4efae36e8ba8f62f00706af353d0f49.jpg" width="1024" height="993" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/kittyProgrammer-a995d55d1ec464ee1917355e061d697c.jpg" width="295" height="221" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/userMeme-f3a82ff72e86b309d61b1323ffea7948.jpg" width="1242" height="1503" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/Hello-World-Programming-1632664832-9f38bbd3c5032d6e787078b6c0ede5af.jpg" width="916" height="907" class="img_ev3q"></p>
-<p><img loading="lazy" src="https://iribov.github.io/xiphium-documentation/assets/images/final-190436d7762363408c8afd9312d4a146.png" width="640" height="609" class="img_ev3q"></p>]]></content:encoded>
         </item>
     </channel>
 </rss>
