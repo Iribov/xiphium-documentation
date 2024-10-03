@@ -1,3 +1,6 @@
+---
+sidebar_position: 8
+---
 # Analysis Isolation Plate
 Analysis_Isolation Plate is the plate (layout) used for isolation, made using the [Analysis Overview](Analysis_Overview.md) screen. The Analysis Isolation Plate record itself only contains basic information about the plate. The actual plate layout is stored in the [Analysis Isolation](Analysis_Isolation.md) records.
 
