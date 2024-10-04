@@ -1,10 +1,15 @@
 ---
-title: Xiphium 2024-W37 update
+title: Xiphium 2024-W37 update (1 year Git(Hub) aniversary)
 authors:
   - jim
 ---
 
 Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).
+
+:::info
+This Blog post marks a year of Tracking Xiphium using Project mode and Git(Hub)!
+This means that we can look back on all changes made to Xiphium in the last year!
+:::
 
 :::warning
 These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.
