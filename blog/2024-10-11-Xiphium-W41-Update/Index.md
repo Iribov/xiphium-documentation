@@ -29,7 +29,7 @@ Several changes have been made to Project2 Year. One of the changes is method **
 Method ***AnIsoPlate_Excel_Export_PCR2*** has been modified to adjust to the new [Analysis_Lysis_Plate] and [Plate_Activty] table.
 
 ## Invoice
-Field [Invoice]Inv_Reason_Credit is now also locked when the status of the invoice is "Send" and/or "Paid".
+Field [Invoice]Inv_Reason_Credit is now unlocked when the status of the invoice is "Send" and/or "Paid".
 
 ## Order
 Field [Order]Ord_Invoice has been added to the Order filter.
