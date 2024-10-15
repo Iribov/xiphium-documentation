@@ -51,3 +51,56 @@ Hours spent on a project can be converted back to cost (in euro's). This is done
 :::note
 As of writing this documentation, it is not possible to get the cost from Tissue Culture or Greenhouse from the [Invoice Items](../Financial/Invoice_Items.md).
 :::
+
+---
+## Changes
+:::note Changes Eloy
+Eloy has been making changes to Project2 Year. Here I will try to explain the changes made to the code.
+:::
+
+### Forecast
+The hour forecast calculations have been modified. I don't think anyone has used it yet so any changes might have been an improvement.
+
+### Budget C
+Budget C (**Pro2Y_Am_C_Budget**) is now calculated as: `Pro2Y_Am_A_Budget_Tot_Prev-Pro2Y_Am_B_Tot_Budget` or in other words; Budget C is now calculated as `Budget A + Leftover Budget A from last year - Budget B`.
+This used to be the calculation for Budget B Hours...
+
+Budget C Saldo (**Pro2Y_Am_C_Saldo**) is now calculated as:  ,`Pro2Y_Am_C_Budget-Pro2Y_Am_C_Real`, which doesn't make much sense. What is realized rest budget (**Pro2Y_Am_C_Real**)?
+:::danger
+Field **Pro2Y_Am_C_Saldo** is calculated twice, so the first calculation of `Pro2Y_Am_C_Saldo:=Pro2Y_Am_A_Budget_Tot_Prev-Pro2Y_Am_B_Tot_Budget` (which is an identical calculation of Budget C (Pro2Y_Am_C_Budget)) is overwritten by the actual calculation .
+:::
+
+:::note clarification
+I had some cunfusion about budget C and its saldo, so here is to clarify:
+- Budget C is the rest budget (difference between Budget A and Budget B)
+- Budget C Saldo, is the amount of 
+:::
+
+**Pro2Y_Am_C_Real** is calculated as `Pro2Y_Hour_Calc_Used*Pro2Y_HourTarif` or simply put, the cost of all hours spent on the project (with 70% rule applied).
+:::tip
+What is the meaning of Budget C, if we use all the cost of the hours made, with an additional percentage, and subtract this from the difference of Budget A and Budget B? It does not seem like a 'rest' budget anymore.
+:::
+
+**Pro2Y_Am_C_Real_Total** is calculated by `Pro2Y_Am_B_Tot_Real+Pro2Y_Am_C_Real` in other words: all cost from invoices plus the cost of all hours spent on this project.
+:::danger
+This could mean that hours that are invoiced, are counted double.
+:::
+
+### Hour Calculation
+**Pro2Y_Hour_Budget** is now calculated as: `Pro2Y_Am_C_Budget/Pro2Y_HourTarif` instead of the old `Pro2Y_Perc_Budget_Hours*Pro2Y_Am_C_Budget_Rest/100`.
+That means the new way of calculating these hours does not take the '70%' rule into account and is just converting the rest budget into hours (so this field is now representing hours, instead of money).
+
+#### Realized Hours
+**Pro2Y_Hour_Calc** are the hours spent on the project. The calculation has remained the same, only a few adjustments to the field names have been made.
+`Pro2Y_Hour_Real_Direct/(Pro2Y_Hour_Perc_Direct/100)` 
+
+| Old Name | New Name | Meaning | 
+| - | - | - |
+| Pro2Y_Hour_Perc_Direct | Pro2Y_Perc_Hour_Direct_Plan | 70% (or other percentage) used to apply to hours |
+| Pro2Y_Hour_Calc | Pro2Y_Hour_Calc_1 | calculate the hours spent on the project with the 70% (or other percentage) rule applied |
+
+So, only direct hours with the 70% (or other percentage) rule applied. This field is now renamed to **Pro2Y_Hour_Calc_1**.
+
+**Pro2Y_Hour_Calc_2** has been added and is calculated as follows: `Pro2Y_Hour_Real_Total/(Pro2Y_Perc_Hour_Total_Plan/100)`. In other words: all hours (direct+indirect) and the 70% rule applied.
+
+**Pro2Y_Hour_Calc_Used** has been added. This new field copies the value of **Pro2Y_Hour_Calc_1** or **Pro2Y_Hour_Calc_2**, whichever is highest. Which is weird, because **Pro2Y_Hour_Calc_2** is always the same or higher as **Pro2Y_Hour_Calc_1**, depending on if there are indirect hours made or not...
