@@ -73,7 +73,7 @@ Field **Pro2Y_Am_C_Saldo** is calculated twice, so the first calculation of `Pro
 :::note clarification
 I had some cunfusion about budget C and its saldo, so here is to clarify:
 - Budget C is the rest budget (difference between Budget A and Budget B)
-- Budget C Saldo, is the amount of 
+- Budget C Saldo, is some kind of calculation of the rest budget - spent money on the project (in hours or invoices).
 :::
 
 **Pro2Y_Am_C_Real** is calculated as `Pro2Y_Hour_Calc_Used*Pro2Y_HourTarif` or simply put, the cost of all hours spent on the project (with 70% rule applied).
