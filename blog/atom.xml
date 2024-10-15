@@ -26,7 +26,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical Lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/11/Xiphium-W41-Update/Index#analytical-lab" class="hash-link" aria-label="Direct link to Analytical Lab" title="Direct link to Analytical Lab">​</a></h2>
 <p>Method <em><strong>AnIsoPlate_Excel_Export_PCR2</strong></em> has been modified to adjust to the new [Analysis_Lysis_Plate] and [Plate_Activty] table.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="invoice">Invoice<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/11/Xiphium-W41-Update/Index#invoice" class="hash-link" aria-label="Direct link to Invoice" title="Direct link to Invoice">​</a></h2>
-<p>Field [Invoice]Inv_Reason_Credit is now also locked when the status of the invoice is "Send" and/or "Paid".</p>
+<p>Field [Invoice]Inv_Reason_Credit is now unlocked when the status of the invoice is "Send" and/or "Paid".</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/11/Xiphium-W41-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
 <p>Field [Order]Ord_Invoice has been added to the Order filter.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-component">Protocol Component<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/11/Xiphium-W41-Update/Index#protocol-component" class="hash-link" aria-label="Direct link to Protocol Component" title="Direct link to Protocol Component">​</a></h2>
