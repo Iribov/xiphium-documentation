@@ -144,6 +144,13 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: "Iribov Logo",
+          src: 'img/logo.png',
+          href: 'https://iribov.com',
+          width: 160,
+          height: 50,
+        },
         copyright: `Copyright © ${new Date().getFullYear()} Iribov, Inc. Built with Docusaurus.`,
       },
       prism: {
