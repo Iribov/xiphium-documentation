@@ -65,3 +65,8 @@ html[data-theme='dark'] .header-github-link:before {
   background: url("/img/Iribov_logo_wo_text.svg") no-repeat;
   background-size: contain;
 }
+
+/* custom footer color */
+.footer {
+  background-color: #001c38;
+}
