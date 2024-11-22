@@ -43,7 +43,7 @@ Prism.languages["4d"] = {
   	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
     // allows space
 	'memberFunction': {
-    pattern : /(\.)#?[_$a-zA-Z\xA0-\uFFFF](?:[$\w\xA0-\uFFFF\s])+(?=\()/,
+    pattern : /(\.)#?[_$a-zA-Z\xA0-\uFFFF](?:[$\w\xA0-\uFFFF])+(?=\()/,
     greedy: true,
   },
   // allows space
