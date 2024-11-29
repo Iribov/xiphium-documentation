@@ -17,7 +17,7 @@ Methods ***AccFunc_GroupCount***, ***AccFunc_UserCount***, ***AccTab_GroupCount*
 and ***AccGr_OverviewStats*** have been modified to show a progress bar.
 
 ## TCPA
-Method ***TCPA_DialogModifyBatch*** has been extended to include the field: [TC_Plan_Action]TCPA_ComCode_Production.
+Method ***TCPA_DialogModifyBatch*** has been extended to include the field: [TC_Plan_Action]TCPA_Remarks_from_ProductionLoc.
 
 ## Clone
 Button "Create Analysis" used to be only able to add clones to an [Analysis_Order] if the order has status "New". The analytical lab expressed how it sometimes happens that a client (mostly internal) sends samples in batches, and when the first batch is received the status changes to "Material send" because the 'Date received' is filled in (manually). One option would have been to only fill a 'Date received' once the last batch has been received, but the analytical lab opted to allow users to add Clones to an [Analysis_Order] when the status is "Material send", you just get a popup with: "Are you sure about this?".
