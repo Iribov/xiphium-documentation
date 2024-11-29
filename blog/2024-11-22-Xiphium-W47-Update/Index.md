@@ -82,6 +82,6 @@ Methods ***ALP_UpdateWells***, ***AnOv_WellEventHandler***, ***AnIsoPlate_Update
 Method ***Leading_zeros*** has been modified to be compatible with a compiled database (had to do with retyping a variant type local variable).
 
 ## Misc
-Method ***Menu_ModifySelectionList*** has replaced its `DISPLAY SELECTION($table->; *)` with `MODIFY SELECTION($table->; Multiple selection; False; *)`. It seems like the code does mostly the same thing, but it might have better behavior like this. => Like this it opens always in the List lay-out and not like what is the normal behavior to open in Detail lay-out when only 1 record is selected as result of a goto from another table
+Method ***Menu_ModifySelectionList*** has replaced its `DISPLAY SELECTION($table->; *)` with `MODIFY SELECTION($table->; Multiple selection; False; *)`. It seems like the code does mostly the same thing, but it might have better behavior like this. => Like this it opens always in the List lay-out and not like what is the normal behavior to open in Detail lay-out when only 1 record is selected as result of a goto from another table.
 
 Method ***Menu_TC2E*** implements this modified ***Menu_ModifySelectionList*** method, using it instead of the (old?) ***Menu_ModifySelection*** mehod.
