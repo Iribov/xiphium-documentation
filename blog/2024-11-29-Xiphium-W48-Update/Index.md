@@ -33,6 +33,6 @@ Method ***TCPA_ExportExcel_Cross_WksSPa2*** has been modified. Some hard coded e
 The 'Create Record' dialog of experiment now also contains 'Experiment Type 1' and is required to be filled.
 
 ## Web stuff
-Method ***Web_LocSettingsController*** has been modified. The 'GET' endpoint for action 'location' has been split into 2. There is one where the ID is knonwn, and one where the ID is unknown.
+Method ***Web_LocSettingsController*** has been modified. The 'GET' endpoint for action 'location' has been split into 2. There is one where the ID is known, and one where the ID is unknown.
 
 Method ***Web_LocSettingsGetLocations*** has been added. This method returns a collection of all locations (From [Spaces_Detail])
