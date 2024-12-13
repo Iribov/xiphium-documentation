@@ -8,14 +8,17 @@ Table containing the planning of the greenhouse. A planning is made per [order](
 ## Status
 The status of the Greenhouse Planning Action (GHPA) can be 1 of the following 4:
 1. Planned
-2. Finished
-3. Overdue
-4. Cancelled
+2. Done
+3. Finished
+4. Overdue
+5. Cancelled
 
 ### Planned
 When the status of a GHPA is 'Planned', this means that the action is planned to happen in the future, and is not fulfilled yet.
+### Done
+When the status of a GHPA is 'Done', this means that the current action is fulfilled, but there are currently still plants in the related Greenhouse-Field records. The action is fulfilled when the fields 'Date Realized' and 'N Plants Realized' are filled.
 ### Finished
-When the status of a GHPA is 'Finished', it means that this action is fulfilled. The action is set to 'Finished' when the field 'Date Realized' has a date in it.
+When the status of a GHPA is 'Finished', it means that this action is fulfilled and there are no longer plants present in related Greenhouse-Field records. The action is fulfilled when the fields 'Date Realized' and 'N Plants Realized' are filled.
 ### Overdue
 When the status of a GHPA is 'Overdue', it means that the 'Date Planned' is in the past, and the action is not fulfilled. This happend when ```Current Date>Date Planned``` and 'Date Realized' is empty.
 ### Cancelled
@@ -29,10 +32,12 @@ The status 'Finished' is dependent on the field 'Date Realized'. This field can 
 | GH0                 | Sowing                     | ❌                 |
 | GH1                 | Planting                   | ✅                 |
 | GH2                 | Sorting                    | ✅                 |
-| GH3                 | Floating Activities        | ❌                 |
-| GH4                 | Repotting                  | ❌                 |
+| GH3                 | Floating Activities        | ❌/✅ *            |
+| GH4                 | Repotting                  | ✅                 |
 | GH5                 | Moving                     | ❌                 |
 | D@                  | Delivery                   | ✅                 |
+
+>*The only floating action that can get a date is the 'Flower Photo' (FP) action. It takes the latest 'Week Ready' field from related greenhouse-field (only if all related 'week-ready' fields are filled)
 
 ### Week Planned
 Method ***GF_UpdateRecords_GHPA*** not only modifies the 'Date Realized' of the Planning action. It also modifies the 'Week Planned' of a GHPA according to what is entered in the Greenhouse Field.

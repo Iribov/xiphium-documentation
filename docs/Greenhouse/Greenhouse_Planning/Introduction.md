@@ -24,7 +24,7 @@ The idea is that spaces will be more integrated in the Greenhouse planning so th
 ---
 ## 1. Order
 
-Everything starts with an [Order](../../Tissue_Culture/Order.md). If ‘Location Delivery 1’ is a company that has the ‘Is Greenhouse’ checkmark in the [Company] table, a greenhouse Protocol can be searched with the ***Ord_Update_GH_Protocol**** Method and is (currently) under the buttons ‘Update GHPA’ and ‘Update GH Protocol’ as shown in figure:
+Everything starts with an [Order](../../Tissue_Culture/Order.md). If ‘Location Delivery 1’ is a company that has the ‘Is Greenhouse’ checkmark in the [Company] table, a greenhouse Protocol can be searched with the ***Ord_Update_GH_Protocol*** Method and is (currently) under the buttons ‘Update GHPA’ and ‘Update GH Protocol’ as shown in figure:
 ![](img/Order_screenshot.png)
 
 The [Order] automatically finds a ‘GH Protocol’ (Greenhouse Protocol) based on the following parameters:
@@ -66,27 +66,31 @@ After an [Order] is connected to a Protocol (by having a protocol code in the �
 A protocol, in this setting, is a ‘global’ instruction on what to do with a plant. A protocol is comprised of multiple steps (a.k.a. [Protocol Lines](Prot_Lines.md)).
 
 Protocol contains information about:
--          What steps (Activities/Activity groups) are needed.
+- What steps (Activities/Activity groups) are needed.
 
 ## 3. Protocol_Lines
 
 [Protocol_Lines] are the individual steps of a protocol. [Protocol_Lines] contain an activity group, and can contain an activity. This activity (group) is used to connect to [Protocol_Component], which contains all the details/parameters of a step.
 
 [Protocol_Lines] contain the information of:
--          What: Activity (Group)
+- What: Activity (Group)
 
 ## 4. Protocol_Component
 
 A protocol component is used to set parameters of a certain activity. These parameters are used to calculate and fill several aspects of the planning.
 
 A Protocol Component is searched with the following parameters (of a planning action):
--          Company Code Exact match necessary
--          Crop Code Exact match necessary
--          Activity Exact Match or empty
--          Activity Group Exact match if activity is not defined
--          Lowest protocol Code and highest version number
 
-Protocol Components hold information for:
+| GHPA                | Protocol Component   | Remark |
+| ---                 | ---                 | --- |
+| Location Code 1     | Company Code        | Exact match necessary |
+| Crop Code           | Crop Code           | Exact match necessary |
+| Activity            | Activity            | Exact match is prioritized or Empty  |
+| Activity Group      | Activity Group      | Exact match necessary |
+| Order Type 5        | Order Type 5        | Exact match necessary |
+The found Protocol Components are then ordered by protocol Code (low to high) and version number (high to low). The first Protocol Component in this selection is picked.
+
+Protocol Components hold information about:
 - What:
     - (Activity)
     - Multiplication Factor (MF)
@@ -110,7 +114,7 @@ square meters = (Amount of plants / Plant per tray) * square meters per tray.
 However, in the choice list ‘Fust Greenhouse’ only the ‘Plants per Unit’ and ‘Plants per m2’ are entered. So we have to calculate the ‘m2 per tray’ by dividing the ‘Plants per Unit’ by ‘Plants per m2’:
 
 :::warning
-This part of the docs is not finished (yet)
+This part is not finished (yet)
 :::
 
 ### Hours planned

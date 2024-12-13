@@ -21,8 +21,18 @@ To fill the parameters of a planning action, a complex query (search) must be do
 
 ## Backwards Calculation
 
-After taking the parameters Multiplication Factor (MF) and Cycle Weeks, we can start creating an actual planning. Taking the prognose week as our final week, we move from the latest planning action (with the highest ‘step number’) to the first planning action. Subtracting weeks and adding the multiplication factor every step of the way.
+After taking the parameters Multiplication Factor (MF) and Cycle Weeks, we can start creating an actual planning. Taking the prognose week from Order as our final week, we move from the latest planning action (with the highest ‘step number’) to the first planning action. Subtracting weeks and adding the multiplication factor every step of the way.
+
+
+|  Week   | Cycle Days | Activity                        |
+| ------- | ---------- | ------------------------------- |
+| Week 12 | 21         | Planting                        |
+| Week 15 | 35         | Moving                          |
+| Week 20 | 35         | Moving                          |
+| Week 25 | 1          | Delivery (=prognose week Order) |
 
 ## Forwards Calculation
 
 When the order contains plants planned for Rooting, Stage 3 Delivery or plants present in the greenhouse, the forwards calculation is performed. The forwards calculation will always overtake the backwards calculation.
+
+The forwards planning makes use of the "Plants Realized" and "Date Realized" from Actions that have been performed, "Plants Planned" and "Date Planned" from actions that have not been performed and "Plants Present" and "Date Planned" for the action that is next (The GHPA with status 'Planned', but previous GHPA with Status 'Done').
