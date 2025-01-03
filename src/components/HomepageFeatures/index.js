@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Specialized in Tissue Culture',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/bio-svgrepo-com.svg').default,
     description: (
       <>
         Xiphium is developed with tissue culture as primary purpose. 
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/magnifying-glass-svgrepo-com.svg').default,
     description: (
       <>
         Xiphium lets you focus on your tissue culture production. We'll make sure everyone is up to date with the same data, so your whole company knows what to do.
