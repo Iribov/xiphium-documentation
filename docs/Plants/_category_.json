@@ -1,0 +1,8 @@
+{
+  "label": "Plants",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Bse tables related to Crop, PlantCodes and CLones as well as summarized Tissue culture data per year/week/company/crop etc."
+  }
+}

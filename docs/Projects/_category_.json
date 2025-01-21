@@ -1,0 +1,8 @@
+{
+  "label": "Projects",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "The Projects module contains project information as well as Employee Hours and Employee Tissue Culture production summarization tables"
+  }
+}

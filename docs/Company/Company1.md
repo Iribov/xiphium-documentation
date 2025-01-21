@@ -1,3 +1,4 @@
+# Company
 The Company table is one of the main base tables of Xiphium. This table contains companies/entities and gives them a unique company number (and\or code) that is referenced across the database. This number/code is generally referred to as the 'Company Code'.
 
 The Company table contains both Internal companies, and external companies (clients).

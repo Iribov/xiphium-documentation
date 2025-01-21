@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-Order is the table which holds a Tissue Culture and/or Greenhouse order.
+Order is the table which represents a Tissue Culture and/or Greenhouse order.
 The core information of an Order includes:
 - Client information
 - Order Type
@@ -13,3 +13,5 @@ On top of the basic registration of an order, the Order table also tracks lots o
 - TC planning
 - Delivery
 - Greenhouse
+
+For more information, see [Order](../Company/Order.md)

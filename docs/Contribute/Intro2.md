@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Docusaurus Intro
 
+> If you're just here for the documentation and don't want to contribute, skip this page!
+
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started

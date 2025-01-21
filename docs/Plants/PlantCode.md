@@ -5,7 +5,7 @@ sidebar_position: 2
 Plant Code is a table that holds the registration of plant variations. Each record has a unique 'Plant Code' that can be used throughout the database as a reference.
 
 A 'Plant Code' is a unique code where a combination of 'owner', 'crop' and variations are registered. This code is made up of:
-- [Company Code](../Company/Company.md) of the owner of the plant/cultivar
+- [Company Code](../Company/Company1.md) of the owner of the plant/cultivar
 - [Crop Code](Crop.md) of the plant
 - Cultivar Code (sequential code within a Crop)
 

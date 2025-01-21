@@ -1,0 +1,8 @@
+{
+  "label": "Breeding",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "The module for plant breeding."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Deliveries",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Tables related to logistics. Mainly DeliveryNote and DeliveryItems"
+  }
+}
