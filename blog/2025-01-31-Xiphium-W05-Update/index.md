@@ -13,7 +13,7 @@ These are interpretations of code read from the weekly changes from Git(Hub) and
 <!--truncate-->
 
 ## Experiment Treatment
-bugfix in Project/Sources/Forms/Scan_Dialog_Experiment3/ObjectMethods/oBtn_Create_Treatment_Summary***. Treatment summary records can now be created in the scanmenu.
+bugfix in Form Scan_Dialog_Experiment3. Treatment summary records can now be created in the scanmenu.
 
 ## Delivery Note
 bugfix in ***DeN_Print_BoxLabel*** to comply with pagebreaks.
