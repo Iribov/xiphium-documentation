@@ -7,7 +7,7 @@ authors:
 Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).
 
 :::warning
-These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors. This weeks commit is so convoluted, many details will be missed.
+These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.
 :::
 
 <!--truncate-->
