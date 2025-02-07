@@ -24,37 +24,31 @@
     url("/static/fonts/Marist/ABCMarist-BookItalic.woff2") format("woff2-variations");
   font-style: italic;
 }
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #e47934;
-  --ifm-color-primary-dark: #de691e;
-  --ifm-color-primary-darker: #d2631c;
-  --ifm-color-primary-darkest: #ad5217;
-  --ifm-color-primary-light: #e7894d;
-  --ifm-color-primary-lighter: #e99159;
-  --ifm-color-primary-lightest: #eeaa7e;
+  --ifm-color-primary: #ff8200;
+  --ifm-color-primary-dark: #e67500;
+  --ifm-color-primary-darker: #d96e00;
+  --ifm-color-primary-darkest: #b35b00;
+  --ifm-color-primary-light: #ff8e1a;
+  --ifm-color-primary-lighter: #ff9526;
+  --ifm-color-primary-lightest: #ffa74d;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-heading-color: var(--ifm-color-primary);
   --ifm-font-family-base: "Marist", "Times New Roman";
+  --ifm-font-color-base: #1E1E1E;
+  --ifm-font-size-base: 17px;
+  --hero-title-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #e47934;
-  --ifm-color-primary-dark: #de691e;
-  --ifm-color-primary-darker: #d2631c;
-  --ifm-color-primary-darkest: #ad5217;
-  --ifm-color-primary-light: #e7894d;
-  --ifm-color-primary-lighter: #e99159;
-  --ifm-color-primary-lightest: #eeaa7e;
-  --ifm-code-font-size: 95%;
+  --ifm-background-color: #1E1E1E !important; /*overwrite default background color*/
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --custom-font-color: #ffffff;
-}
-
-/* Only use blue for light mode, dark mode switches automatically to white text */
-.markdown h1, h2, h3, h4 {
-  color: var(--custom-font-color) !important;
+  --ifm-font-color-base: #ffffff;
+  --hero-title-color: var(--ifm-background-color);
 }
 
 .header-github-link:hover {
@@ -86,7 +80,11 @@ html[data-theme='dark'] .header-github-link:before {
   background-size: contain;
 }
 
-/* custom footer color */
-.footer {
-  background-color: #001c38;
+.hero__title{
+  color: var(--hero-title-color);
+}
+
+.footer{
+ --ifm-footer-background-color: #001c38;
+  --ifm-footer-title-color: var(--ifm-color-primary);
 }
