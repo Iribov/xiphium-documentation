@@ -190,6 +190,23 @@ const config = {
         //... other Algolia params
       },
     }),
+    scripts: [
+      {
+        src: "/fonts/Marist/ABCMarist-Bold.woff2",
+        type: "font/woff2",
+        async: true,
+      },
+      {
+        src: "/fonts/Marist/ABCMarist-Book.woff2",
+        type: "font/woff2",
+        async: true,
+      },
+      {
+        src: "/fonts/Marist/ABCMarist-BookItalic.woff2",
+        type: "font/woff2",
+        async: true,
+      },
+    ],
 };
 
 export default config;

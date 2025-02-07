@@ -4,6 +4,26 @@
  * work well for content-centric websites.
  */
 
+ /*apply the iribov font*/
+@font-face {
+  font-family: "Marist";
+  src: url("/static/fonts/Marist/ABCMarist-Bold.woff2") format("woff2 supports variations"),
+    url("/static/fonts/Marist/ABCMarist-Bold.woff2") format("woff2-variations");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Marist";
+  src: url("/static/fonts/Marist/ABCMarist-Book.woff2") format("woff2 supports variations"),
+    url("/static/fonts/Marist/ABCMarist-Book.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Marist", "Times new Roman";
+  src: url("/static/fonts/Marist/ABCMarist-BookItalic.woff2") format("woff2 supports variations"),
+    url("/static/fonts/Marist/ABCMarist-BookItalic.woff2") format("woff2-variations");
+  font-style: italic;
+}
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #e47934;
@@ -15,7 +35,7 @@
   --ifm-color-primary-lightest: #eeaa7e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --custom-font-color: #022c69;
+  --ifm-font-family-base: "Marist", "Times New Roman";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
