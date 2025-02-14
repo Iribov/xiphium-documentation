@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Iribov.github.io/xiphium-documentation/blog</id>
     <title>Xiphium Blog</title>
-    <updated>2025-02-07T00:00:00.000Z</updated>
+    <updated>2025-02-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Iribov.github.io/xiphium-documentation/blog"/>
     <subtitle>Xiphium Blog</subtitle>
     <icon>https://Iribov.github.io/xiphium-documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Xiphium 2025-W07 update]]></title>
+        <id>https://Iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index</id>
+        <link href="https://Iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index"/>
+        <updated>2025-02-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></summary>
+        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial">Financial<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#financial" class="hash-link" aria-label="Direct link to Financial" title="Direct link to Financial">​</a></h2>
+<p>Method <em><strong>Access_SetupFinancialMenu</strong></em> has 3 new output form and 3 new input form tabs added to it.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="investments">Investments<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#investments" class="hash-link" aria-label="Direct link to Investments" title="Direct link to Investments">​</a></h3>
+<p>Work has been done on the financial investment table(s). This is mostly front-end/visual work and less logic work.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deliveries">Deliveries<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#deliveries" class="hash-link" aria-label="Direct link to Deliveries" title="Direct link to Deliveries">​</a></h2>
+<p>Method <em><strong>DiT_Export_For_Transp_Invoice</strong></em>  has 6 columns added to it called:</p>
+<ul>
+<li>Plantcode</li>
+<li>Plantname</li>
+<li>/# containers</li>
+<li>Amount</li>
+<li>Price</li>
+<li>Total Price</li>
+</ul>
+<p>Method <em><strong>DiT_Export_PackingListExpress</strong></em> has a bold format added for the net weight, dimensions and the box.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse_field">Greenhouse_Field<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#greenhouse_field" class="hash-link" aria-label="Direct link to Greenhouse_Field" title="Direct link to Greenhouse_Field">​</a></h2>
+<p>Method <em><strong>GF_ExportExcelReportEstimateQC</strong></em> has the new column "Type start material" added to it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ghpa">GHPA<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#ghpa" class="hash-link" aria-label="Direct link to GHPA" title="Direct link to GHPA">​</a></h2>
+<p>Method <em><strong>GHPA_Automatic_Planning_Calc</strong></em> has been adjusted to only fire the forwards calculation when the when the stage3 delivery week is fixed or there are plants present in the greenhouse.</p>
+<p>Method <em><strong>GHPA_Backwards_Calculation</strong></em> is simplified for readability. The function should be (more or less) identical.</p>
+<p>Method <em><strong>GHPA_UpdateRecord_GF</strong></em> has been adjusted to use the temperature of the spaces history. Spaces history can now be used to plan thye temperature of a space.</p>
+<p>Method <em><strong>GHPA_ColorField</strong></em>  has been modified. The method is supposed to compare Start Week, end Week, Fust and temperature and make the field red when there is a change. However, because these comparisons are done with data from other tables, some are too slow to actually work. I might need to pull data into the GHPA table with the 'updaterecord' method to do a faster comparison. This does mean, however, that the comparison will always be out of date...</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-order">Analysis Order<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#analysis-order" class="hash-link" aria-label="Direct link to Analysis Order" title="Direct link to Analysis Order">​</a></h2>
+<p>Bug in auto layout (automatic plate creation) resolved.</p>
+<p>Method <em><strong>AnSam_Import_Ploidy_Request</strong></em> has been adjusted to check for empty rows in the excel.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="apps">Apps<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#apps" class="hash-link" aria-label="Direct link to Apps" title="Direct link to Apps">​</a></h2>
+<p>Constant <code>Xiphium Media Storage App ID</code> is added to method <em><strong>Constants_Setup</strong></em>.</p>
+<p>Methods <em><strong>Web_MediaStorageController</strong></em>, <em><strong>Web_MediaStorageGetDetails</strong></em>, <em><strong>Web_MediaStorageGetMedia</strong></em>, <em><strong>Web_MediaStorageGetUser</strong></em> and <em><strong>Web_MediaStorageSaveDetails</strong></em> have been added for the MediaStorage app.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="misc">Misc<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#misc" class="hash-link" aria-label="Direct link to Misc" title="Direct link to Misc">​</a></h2>
+<p>Method <em><strong>Constants_Add</strong></em> has it's syntax error in the <code>#DECLARE</code> fixed. And for some reason the <code>If (Count parameters&lt;4)</code> replaced by <code>If ($type="")</code></p>
+<p>Method <em><strong>Mail_NewMessage</strong></em> is modified to set property 'content' to 'html content'.</p>
+<p>Method <em><strong>Ord_DeliveryAnnouncementMail</strong></em> now sends to <a href="mailto:rob.laveaux@pluggers.nl" target="_blank" rel="noopener noreferrer">rob.laveaux@pluggers.nl</a> instead of <a href="mailto:info@pluggers.nl" target="_blank" rel="noopener noreferrer">info@pluggers.nl</a>.</p>]]></content>
+        <author>
+            <name>Jim Kerver</name>
+            <uri>https://github.com/Jim-Kerver</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Xiphium 2025-W06 update]]></title>
         <id>https://Iribov.github.io/xiphium-documentation/blog/2025/02/07/Xiphium-W06-Update/Index</id>
@@ -790,64 +835,6 @@ A selection of treatments is made and the treatment with the highest cycle of th
 <p>Table [Media_Production] now supports documents being added to its records.</p>
 <p>Method <em><strong>Doc_ShowDetailFormPreviewExT</strong></em> has been modified to properly display related documents of Experiment Treatments.</p>
 <p>It seems like several tables thtat didn't have any forms, now have an automatically created Input and Output form.</p>]]></content>
-        <author>
-            <name>Jim Kerver</name>
-            <uri>https://github.com/Jim-Kerver</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Xiphium 2024-W39 update]]></title>
-        <id>https://Iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index</id>
-        <link href="https://Iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index"/>
-        <updated>2024-10-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></summary>
-        <content type="html"><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
-<hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical Lab<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#analytical-lab" class="hash-link" aria-label="Direct link to Analytical Lab" title="Direct link to Analytical Lab">​</a></h2>
-<p>The Analytical lab has 2 new tables inserted into their workflow:</p>
-<ol>
-<li>Analysis_Lysis</li>
-<li>Analysis_Lysis_Plate</li>
-</ol>
-<p>Analysis_Lysis has been inserted between Analysis_Sample and Analysis_Isolation to facilitate the user to create seperate Lysis and Isolation plates (before, these were considered 'the same' plate).
-This change was necessary since from the first design of the Analytical Lab automation, a 'lysis plate' and 'elution plate' were always identical, hence the previous 'isolation plate' was enough to cover them both. Since then, new techniques have been adopted making this assumption untrue, and a necessity for the extra 'lysis' tables was born.</p>
-<p>This change was first developed seperately in project mode, so the changes could be tracked. The tracked changes came to 360 files changed, of which 60 are project methods (in project mode, every object method is also a file. So deleting/adding objects with a method can result in many file changes).
-Implementing these changes was done manually, copy and pasted file by file. UI changed had to be done manually, object by object.</p>
-<p>After implementation, some bugs were reported. This was mostly due to copy/paste mistakes, and partially due to project mode differences and incomplete testing beforehand.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>It is not recommended to do big changes like this without using project mode in production. All the manual copy+pasting took many hours, and can be replaced by a single 'merge', resulting in many more hours available for testing.</p></div></div>
-<p>All file changes regarding this major update will be ignored for the rest of this blog post.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dashboard">Dashboard<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#dashboard" class="hash-link" aria-label="Direct link to Dashboard" title="Direct link to Dashboard">​</a></h2>
-<p>New Dashboard page has been added showing several TPPs:</p>
-<ul>
-<li>TPP Rooting</li>
-<li>TPP Delivered</li>
-<li>TPP Planted</li>
-<li>TPP Accepted/Invoiced</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="plant-company-year">Plant Company Year<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#plant-company-year" class="hash-link" aria-label="Direct link to Plant Company Year" title="Direct link to Plant Company Year">​</a></h3>
-<p>Method <em><strong>PlaCY_UpdateRecord</strong></em> has been updated to calculate more kinds of Transfer per Plant (TPP) to facilitate the dashboard.</p>
-<p>The dashboard can show either a bar chart for the selected years, or a bubble chart showing the TPP of the last selected year but the total amount of plants of the selected years.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deliverynote">DeliveryNote<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#deliverynote" class="hash-link" aria-label="Direct link to DeliveryNote" title="Direct link to DeliveryNote">​</a></h2>
-<p>Filter is made to filter records where Pending 1 or Pending 2 is not 0.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
-<p>Go to option added to 'Go to Prices' using method <em><strong>Ord_Goto_Prices</strong></em></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project2_year">Project2_Year<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#project2_year" class="hash-link" aria-label="Direct link to Project2_Year" title="Direct link to Project2_Year">​</a></h2>
-<p>Some fields have been renamed:</p>
-<table><thead><tr><th>Old fieldname</th><th>New fieldname</th></tr></thead><tbody><tr><td>Pro2Y_Am_Saldo_Budget_Cost</td><td>Pro2Y_Am_A_Saldo</td></tr><tr><td>Pro2Y_Am_C_Invoiced_TC</td><td>Pro2Y_Am_B_TC_Saldo</td></tr><tr><td>Pro2Y_Am_C_Invoiced_Ana</td><td>Pro2Y_Am_B_Ana_Saldo</td></tr><tr><td>Pro2Y_Am_C_Invoiced_GF</td><td>Pro2Y_Am_B_GF_Invoiced</td></tr><tr><td>Pro2Y_Am_C_Invoiced_Other</td><td>Pro2Y_Am_B_Other_Saldo</td></tr><tr><td>Pro2Y_Am_C_Invoiced_Total</td><td>Pro2Y_Am_B_Total_Invoiced</td></tr><tr><td>Pro2Y_Am_Saldo_Budget_Cost_MP</td><td>Pro2Y_Am_A_Saldo_MP</td></tr><tr><td>Pro2Y_Am_B_Tot_Budget_Saldo</td><td>Pro2Y_Am_B_Tot_Saldo</td></tr><tr><td>Pro2Y_Am_C_Budget_Real</td><td>Pro2Y_Am_C_Real</td></tr><tr><td>Pro2Y_Am_C_Budget_Saldo</td><td>Pro2Y_Am_C_Saldo</td></tr></tbody></table>
-<p>And three new fields have been added:</p>
-<ul>
-<li>Pro2Y_Rec_Pro2W</li>
-<li>Pro2Y_Am_D_Invoiced</li>
-<li>Pro2Y_Hour_Saldo</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="documents">Documents<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#documents" class="hash-link" aria-label="Direct link to Documents" title="Direct link to Documents">​</a></h2>
-<p>Method <em><strong>Doc_CopyDocument</strong></em> has been adjusted to be able to suppress the alert when a document is not found.</p>
-<p>Method <em><strong>Exp_SyncExportDocuments</strong></em> has been adjusted to only try to export a document if it exists on the server. Newly added method <em><strong>File_ExistsDocumentOnServer</strong></em> helps with this.</p>
-<p>Methods <em><strong>Doc_GetPreviewableItems</strong></em> and <em><strong>Doc_ShowListFormPreview</strong></em> have been adjusted to be better compatible with OneDrive files.</p>
-<p>Methods <em><strong>Exp_SyncExportExperiments</strong></em> and <em><strong>Exp_SyncImportExperiments</strong></em> now exports/imports both the Experiment and Treatment documents.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-component">Protocol Component<a href="https://iribov.github.io/xiphium-documentation/blog/2024/10/03/Xiphium-W39-Update/Index#protocol-component" class="hash-link" aria-label="Direct link to Protocol Component" title="Direct link to Protocol Component">​</a></h2>
-<p>Buttons 'vScan_Btn_Close3' and 'vScan_Btn_Close5' have been added to form [Prot_Component];'ProtComp_List'. The 2 buttons contain almost identical code for importing tab delimited text from the pasteboard only difference is that one of the buttons doesn't actually save the record, and is likely used as a test.</p>]]></content>
         <author>
             <name>Jim Kerver</name>
             <uri>https://github.com/Jim-Kerver</uri>
