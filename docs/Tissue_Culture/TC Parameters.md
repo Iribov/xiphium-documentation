@@ -1,7 +1,7 @@
 Choosing parameters to use in the Planning actions follows a 'decision tree' with varying specificities. The following tables are used (from low to high specificity):
 
-1. Crop
-2. Cultivar (in table PlantCode Loc for now)
+1. Cultivar Group
+2. Plant Code Location
 3. TC_Plan_Group
 
 The most important parameters can be specifically set here for a specific Activity Group
@@ -20,6 +20,6 @@ The code (will) search for protocol components with protocol code 1, and a speci
 This means, that if you have an activity like CA (multiplication), and need to use a different Protocol Component (protocol code 2) for a specific cultivar, all your other T1 activities will also prioritize the protocol component with protocol code 2! This is by design because the alternative would be having many records in protocol component with a lot of extra fields for Cultivar, PlantCode and TCPG which is impossible to manage properly.
 
 ![](beslissingsboom.png)
-::: info
+:::info
 The decision tree is still in development. Not all functionality described here is (fully) implemented.
 :::
