@@ -17,7 +17,7 @@ The Entity Relational Diagram (ERD) of the system is shown in Figure below.
 
 Next step is to fill the planning action with parameters from [Protocol Component](../../Tissue_Culture/Prot_Component.md), which will actually make the planning actions useful.
 
-To fill the parameters of a planning action, a complex query (search) must be done to account for the possible exceptions. Currently, only a simple query is performed in [Protocol Component](../../Tissue_Culture/Prot_Component.md) where the CropCode, Activity (or Activity Group) is taken. The matching [Protocol Component](../../Tissue_Culture/Prot_Component.md) with the lowest Protocol Number is chosen to receive its parameters from. The Protocol Number is saved in the planning action.
+To fill the parameters of a planning action, a complex query (search) must be done to account for the possible exceptions. These exceptions are stored in the PlantC_Total (a.ka. Plant Location Total). In this table you can enter an alternative Protocol Code/Number for each Activity Group. Then, a query is performed in [Protocol Component](../../Tissue_Culture/Prot_Component.md) where the CropCode, Activity (or Activity Group) is taken. The matching [Protocol Component](../../Tissue_Culture/Prot_Component.md) with the lowest Protocol Number, or a matching alternative Protocol Code/Number, is chosen to receive its parameters from. The IDM of the Protocol Component is saved in the planning action.
 
 ## Backwards Calculation
 
