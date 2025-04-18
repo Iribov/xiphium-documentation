@@ -41,6 +41,7 @@
   --ifm-font-color-base: #1E1E1E;
   --ifm-font-size-base: 17px;
   --hero-title-color: #ffffff;
+  --footer-background-color: #efefef;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -49,6 +50,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-font-color-base: #ffffff;
   --hero-title-color: var(--ifm-background-color);
+  --footer-background-color: #91918c;
 }
 
 .header-github-link:hover {
@@ -85,6 +87,7 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 .footer{
- --ifm-footer-background-color: #001c38;
+ --ifm-footer-background-color: var(--footer-background-color);
   --ifm-footer-title-color: var(--ifm-color-primary);
+  --ifm-footer-link-color: var(--ifm-font-family-base)
 }
