@@ -27,6 +27,21 @@ This does mean we need to get a new parameter: **Deliveries**. Including **Deliv
 
 It gives a truer sense of how efficiently your team turns **effort into real-world results** — not just future potential (stock), but actual deliveries too.
 
+unfortunately, we are not fully there yet. It is possible that we get stock delivered from another location somwhere in the period. This has to be adjusted from the stock, making the formula:
+
+`TPP = Transfers / Deliveries + ΔStock`
+
+Where:
+- **Transfers** = the number of times you propagated plants (your effort/work).
+- **Deliveries** = plants sent to customers.
+- **ΔStock** = change in stock = `EndStock - BeginStock - ExternalIn`
+-  `ExternalIn` is the stock delivered from another location.
+
+This way:
+- We still give credit to actual deliveries and real growth.
+- We **don’t reward** growth that came from **receiving plants from another lab**.
+- We maintain a fair, **effort-based TPP**.
+
 If you want to calculate another TPP like TPP Accepted plants, simply add the loss margins of the accepted plants (compared to stage3 tissue culture plants) into the formula to get:
 
 `TPP = Transfers / Delivered accepted plants + ΔStock * Loss`
