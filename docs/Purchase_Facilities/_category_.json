@@ -1,0 +1,8 @@
+{
+  "label": "Purchase Facilities",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "The Purchase Facilities module manages the lifecycle of non-plant items and services within Xiphium. This module is planned to undergo some changes, where local purchase tables will be added (and used locally) and aggregated in the current purchase tables."
+  }
+}
