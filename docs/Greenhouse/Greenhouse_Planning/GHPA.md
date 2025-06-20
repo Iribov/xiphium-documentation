@@ -3,9 +3,32 @@ sidebar_position: 4
 ---
 # Greenhouse Planning Action (GHPA)
 
-Table containing the planning of the greenhouse. A planning is made per [order](../../Tissue_Culture/Order.md). If plants from different orders are planted together in [Greenhouse_Field](../Greenhouse_Field.md), the planning is still maintained per order. Production numbers syncronized from [Greenhouse_Field](../Greenhouse_Field.md) will be split to the planning action in ratio of the amount of plants in their related [order](../../Tissue_Culture/Order.md).
+## Purpose
+Table containing the planning of the greenhouse. A planning is made per [order](../../Tissue_Culture/Order.md). If plants from different orders are planted together in [Greenhouse_Field](../Greenhouse_Field.md), the planning is still maintained per order. Production numbers synchronized from [Greenhouse_Field](../Greenhouse_Field.md) will be split to the planning action in ratio of the amount of plants in their related [order](../../Tissue_Culture/Order.md).
 
-## Status
+## The bigger picture
+Planning the greenhouse actions per step (rather than the old 'total time in greenhouse' planning) creates better estimates for production, which is useful for account managers, as well as an automatic work list for the greenhouse.
+
+## Key relationships
+- [Order](../../Company/Order/Order.md): to get some its core information (Crop/Plant Code, Incoming Week, Delivery Week)
+- [Prot_Lines](Prot_Lines.md): to know what action to perform
+- [Prot_Component](../../Tissue_Culture/Prot_Component.md): to know the parameters/details of that action for this Crop/Plant Code
+- `Spaces` (only when an action is planned for a specific space)
+
+- The relation to [Greenhouse_Field](../Greenhouse_Field.md) and [Mutations](../Mutations.md) runs via the Order relation.
+## Core Fields
+- `Status`: displays the status of the action.
+- `Activity`: Indicates what action has to be done.
+- `Cycle Days`: Amount of time the plants has to grow/stay put after the action has been performed.
+- `Date Planned`: The date this action has been planned for
+- `Date Realized`: The (last) date this action has actually been done
+- `Plants Planned`: Amount of plants planned for this action
+- `Plants Realized`: Amount of plants actually done/realized.
+- `Temperature Day`: Ambient temperature requirement for the plant during/after this action at night.
+- `Temperature Night`: Ambient temperature requirement of the plant during/after this action at night.
+- `GHPA_IDM_Previous`: links back to its previous action. Makes it easier to go through the 'chain' of actions to update the planning.
+
+### Status
 The status of the Greenhouse Planning Action (GHPA) can be 1 of the following 4:
 1. Planned
 2. Done
@@ -13,18 +36,18 @@ The status of the Greenhouse Planning Action (GHPA) can be 1 of the following 4:
 4. Overdue
 5. Cancelled
 
-### Planned
+#### Planned
 When the status of a GHPA is 'Planned', this means that the action is planned to happen in the future, and is not fulfilled yet.
-### Done
+#### Done
 When the status of a GHPA is 'Done', this means that the current action is fulfilled, but there are currently still plants in the related Greenhouse-Field records. The action is fulfilled when the fields 'Date Realized' and 'N Plants Realized' are filled.
-### Finished
+#### Finished
 When the status of a GHPA is 'Finished', it means that this action is fulfilled and there are no longer plants present in related Greenhouse-Field records. The action is fulfilled when the fields 'Date Realized' and 'N Plants Realized' are filled.
-### Overdue
+#### Overdue
 When the status of a GHPA is 'Overdue', it means that the 'Date Planned' is in the past, and the action is not fulfilled. This happend when ```Current Date>Date Planned``` and 'Date Realized' is empty.
-### Cancelled
+#### Cancelled
 When the status of a GHPA is 'Cancelled', it means that the related [Order](../../Tissue_Culture/Order.md) of that GHPA is set to 'Cancelled'. This action no longer needs to be fulfilled.
 
-## Realized
+## Date&Plants Realized
 Greenhouse Planning actions need to adjust to the reality. If a plant batch is received earlier, then the rest of the planning must be adjusted according to that. In other words, the planning needs to adjust itself according to what happened in the reality. For this reason, we have the "Date Realized" and "Plants Realized" fields.
 
 The "Date Realized" and "Plants Realized" fields are filled using method ***GHPA_UpdateRecords_GF***. This is a rather complex method but in essence it looks to related Greenhouse_Field records (via the Order relation) and gathers data from different places depending on the kind of GHPA we're updating.

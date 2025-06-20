@@ -2,7 +2,13 @@
 sidebar_position: 2
 ---
 # Delivery Items
-Delivery Items are the detail of [DeliveryNote](DeliveryNote.md). Delivery Items are connected to a DeliverNote through the DeliveryNote Number.
+## Purpose
+
+Represents the individual units within a delivery — typically trays, boxes, or other containers of plant material. Each row reflects one distinct item being delivered, including its composition and origin.
+
+## The Bigger Picture
+
+Delivery items are the building blocks of a delivery note. While `DeliveryNote` provides the high-level context (e.g. where and when), `Delivery_Items` defines the contents. This table is critical for translating production output into logistics documentation, customer communication, and stock movements. It also forms a bridge to quality control and post-delivery tracking.
 
 Delivery Items can be used to move plants out of, and into Tissue Culture stock and the Greenhouse(-Field). 
 

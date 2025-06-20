@@ -1,0 +1,1 @@
+This table exists solely to connect multiple [Pathogen](Pathogen.md) records to multiple [Analysis_Test](Analysis_Test.md) records.

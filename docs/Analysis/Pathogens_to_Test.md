@@ -1,0 +1,1 @@
+Pathogens to Test is a table solely for connecting [Analysis_SubOrder](Analysis_SubOrder.md) to [Pathogen](Pathogen.md) to indicate that the [Analysis_Samples](Analysis_Sample.md) of this suborder all need to be tested on this/these pathogen(s).

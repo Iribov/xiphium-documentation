@@ -2,18 +2,33 @@
 sidebar_position: 1
 ---
 # Delivery Note
-The Delivery Note table contains information generally seen on a delivery note. In addition, some Plant and Tissue Culture related information is also added. A Delivery (can) consists out of multiple [Delivery_Items](Delivery_Items.md). The distinction between DeliveryNote and Delivery Items is that the DeliveryNote contains more general information about **WHERE** the delivery is going (address, company, etc.), while the Delivery_Items contain the information of **WHAT** is being sent.
 
-There are 3 different types of deliveryNotes:
-1. Out
-2. In
-3. Internal
+## Purpose
 
-### Out
-The DeliveryNote type 'Out' indicates that the plants are going 'out of the company' and (usually) to a client.
+The `DeliveryNote` entity records the overarching details of a delivery transaction, encompassing information such as destination address, recipient company, and delivery type. It serves as the primary document for tracking the movement of plant materials, particularly within the context of plant and tissue culture operations.
 
-### In
-The DeliveryNote type 'in' indicates that plants are going 'in to the company'.
+## The Bigger Picture
 
-### Internal
-The DeliveryNote type 'internal' indicates that plants are being sent internally. However, this doesn't mean it's going from and to the same company code.
+Within the delivery workflow, the `DeliveryNote` functions as the central record that encapsulates the "where" and "why" of a shipment. It provides context for the associated `Delivery_Items`, which detail the specific contents of the delivery. This separation ensures clarity between the logistical aspects of the delivery and the items being transported.
+
+## Key Relationships
+    
+- `Delivery_Items`: Each `DeliveryNote` is linked to one or more `Delivery_Items` that specify the individual items included in the delivery.
+        
+## Core Fields
+
+- `DeliveryNote Type`: Categorizes the delivery as 'Out', 'In', or 'Internal'.
+- `DestinationCompany`: Identifies the recipient company of the delivery.
+- `DestinationAddress`: Specifies the delivery location.
+- `DeliveryDate`: Records the date the delivery is scheduled or has occurred
+
+## Common Usage
+
+Users create a `DeliveryNote` when initiating a shipment of plant materials. The note captures essential information about the delivery's destination and purpose. Subsequently, users associate specific items with the delivery by adding entries to the `Delivery_Items` table. This process facilitates accurate tracking and documentation of both the delivery's logistics and its contents. 
+
+## Edge Cases
+
+- **Internal Deliveries:** While labeled as 'Internal', these deliveries may occur between different company codes, indicating transfers within the organization but across distinct operational units.
+
+## Caveats
+Deliveries also fill or empty the greenhouse stock. So if any plants need to put into the greenhouse, or taken out of the greenhouse, it has to follow the delivery process.

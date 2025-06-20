@@ -14,4 +14,4 @@ On top of the basic registration of an order, the Order table also tracks lots o
 - Delivery
 - Greenhouse
 
-For more information, see [Order](../Company/Order.md)
+For more information, see [Order](../Company/Order/Order.md)

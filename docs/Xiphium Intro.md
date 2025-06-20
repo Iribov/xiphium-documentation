@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 ---
-Xiphium is an [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning) created in-house by [Iribov](www.iribov.com). It is not commercially available. This documentation helps Iribov employees to navigate this vast program as we continue to develop more features.
+Xiphium is an [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning) created in-house by [Iribov](https://iribov.com). It is not commercially available. This documentation helps Iribov employees to navigate this vast program as we continue to develop more features.
 
 ## 4D
 Xiphium is built on the [4D platform](https://us.4d.com/). 4D offers a fast and easy development experience, all in the same environment. This does mean that Xiphium is bound to the limits of the 4D platform.

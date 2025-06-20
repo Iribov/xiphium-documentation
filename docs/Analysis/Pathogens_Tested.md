@@ -1,0 +1,1 @@
+Pathogens Tested is a table used solely to indicate that an [Analysis_Sample](Analysis_Sample.md)has been tested on the related pathogen(s). It also indicated (per pathogen!) what the result of the test was (either `+`, `-` or `+/-`, Positive, Negative or uncertain).
