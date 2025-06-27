@@ -11,7 +11,7 @@ These are interpretations of code read from the weekly changes from Git(Hub) and
 :::
 
 :::info
-A total of 67 files were modified. Most of which are 
+A total of 67 files were modified. Most of which are to update variable declaration.
 :::
 
 <!--truncate-->
