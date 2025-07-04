@@ -33,6 +33,15 @@ After taking the parameters Multiplication Factor (MF) and Cycle Weeks, we can s
 
 ## Forwards Calculation
 
-When the order contains plants planned for Rooting, Stage 3 Delivery or plants present in the greenhouse, the forwards calculation is performed. The forwards calculation will always overtake the backwards calculation.
+When the Order either has plants present in the greenhouse, or the checkmark 'Week stage 3 fixed' is checked, the forwards calculation is performed. After this, a check is made for either of the following states:
+
+1. There are related Greenhouse_Field records. This condition takes the start amount of plants and the start week from the Greenhouse_Field record
+2. Field 'Ord_N_Plants_Stage3_GF_Manual' is larger than 0 (this field is a manual estimate for greenhouse amounts). This condition takes the start amount of plants from this estimate, and the start week from the other manual field 'Ord_Week_Stage3'
+3. Field 'Ord_Week_Stage3' is not 0. This condition takes the start amount of plants from field 'Ord_Week_Stage3' and the start week from 'Ord_Week_S3_TCPA'.
+4. There are related TCPA records with activity Group 'D@'. This condition stakes the start amount of plants from the sum of field 'Ord_Week_Stage3' and the start week from the maximum of field 'TCPA_Week_Real'
+
+:::danger
+If none of these conditions are met, no calculation is performed (not even a backwards calculation!).
+:::
 
 The forwards planning makes use of the "Plants Realized" and "Date Realized" from Actions that have been performed, "Plants Planned" and "Date Planned" from actions that have not been performed and "Plants Present" and "Date Planned" for the action that is next (The GHPA with status 'Planned', but previous GHPA with Status 'Done').
