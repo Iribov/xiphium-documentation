@@ -82,7 +82,7 @@ De IDM is calculated here as:
 ```4D
 ID*1000)+Settings_GetDefaultCompany_Num
 ```
-Even though according to the [documentation](../../docs/General/IDM) it should be:
+Even though according to the [documentation](/docs/General/IDM) it should be:
 ```4D
 ID*100)+Settings_GetDefaultCompany_Num
 ```
