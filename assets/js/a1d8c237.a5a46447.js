@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2152],{7983:e=>{e.exports=JSON.parse('{"permalink":"/xiphium-documentation/blog/page/3","page":3,"postsPerPage":10,"totalPages":8,"totalCount":74,"previousPage":"/xiphium-documentation/blog/page/2","nextPage":"/xiphium-documentation/blog/page/4","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
