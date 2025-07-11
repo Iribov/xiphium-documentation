@@ -4,10 +4,47 @@
         <title>Xiphium Blog</title>
         <link>https://Iribov.github.io/xiphium-documentation/blog</link>
         <description>Xiphium Blog</description>
-        <lastBuildDate>Fri, 04 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Xiphium 2025-W28 update]]></title>
+            <link>https://Iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index</link>
+            <guid>https://Iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index</guid>
+            <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
+            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>A total of 104 files were modified. Many of which are form alterations that will not be discussed here.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="delivery">Delivery<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#delivery" class="hash-link" aria-label="Direct link to Delivery" title="Direct link to Delivery">​</a></h2>
+<p>Method <em><strong>DiT_CreateClones</strong></em> has been added to facilitate creating Clones from Delivery Items. However, the method does not check if the Plant_Code actually exists. It does check if the Clone already exists or not.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="clone">Clone<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#clone" class="hash-link" aria-label="Direct link to Clone" title="Direct link to Clone">​</a></h2>
+<p>Method <em><strong>Clo_ColorField</strong></em> has a whole new section that colors several fields based on certification results.</p>
+<p>Modify batch can now modify the 'Virus' checkmark.</p>
+<p>Method <em><strong>Clo_UpdateRecord_Ana</strong></em> has its classic queries to [Analysis_Samples] replaced by ORDA.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plant-code">Plant Code<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#plant-code" class="hash-link" aria-label="Direct link to Plant Code" title="Direct link to Plant Code">​</a></h2>
+<p><em><strong>Pla_Colorfield_List</strong></em> also color based on certified status.</p>
+<p><em><strong>Pla_UpdateRecord</strong></em> now takes analysis results for certification just like in Clones.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tc-plan-action">TC Plan Action<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#tc-plan-action" class="hash-link" aria-label="Direct link to TC Plan Action" title="Direct link to TC Plan Action">​</a></h2>
+<p>Field TCPA_CropCultCode has been added to TCPA. All of the cultivar fields are queried from Plant_Code, which could have been connected via TCPG but is chosen to be copy/pasted into TCPA instead.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytical-lab">Analytical Lab<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#analytical-lab" class="hash-link" aria-label="Direct link to Analytical Lab" title="Direct link to Analytical Lab">​</a></h2>
+<p>Method <em><strong>AnPlate_ExportFCM_AnPla_Layout</strong></em> has been modified to be able to deal with 384 plates and npw accept an entitySelection instead of a string of platenames (comma separated). All references to this method have been updated as well.</p>
+<p>Field [Analysis_Order]AnO_Year has been renamed to [Analysis_Order]AnO_Year_Result to clarify what year it takes (the table contains multiple date fields).</p>
+<p>Method <em><strong>AnOv_InitPlateCanvas</strong></em> has been corrected. A 384 plate showed 2 'H' rows because of a typo.</p>
+<p>Analysis_Oligo's now display an additional popup when put into the basket (for ordering). This popup only appears when the Oligo was last ordered withing 6 months. This is to prevent double orders, because it is unlikely that an Oligo will be ordered more often than every 6 months.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="contract">Contract<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#contract" class="hash-link" aria-label="Direct link to Contract" title="Direct link to Contract">​</a></h2>
+<p>Method <em><strong>Con_ColorField</strong></em> has been extended to color the 'Week Ready' field based on the status and/or week ready data.</p>
+<p>Method <em><strong>Con_UpdateRecord</strong></em> now counts the amount of actions and open actions from the [ActionList]</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ledgers">Ledgers<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#ledgers" class="hash-link" aria-label="Direct link to Ledgers" title="Direct link to Ledgers">​</a></h2>
+<p>Method <em><strong>FinLGM_UpdateRecord</strong></em> has been expanded. Many more fields are now filled with data.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse_field">Greenhouse_Field<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#greenhouse_field" class="hash-link" aria-label="Direct link to Greenhouse_Field" title="Direct link to Greenhouse_Field">​</a></h2>
+<p>Method <em><strong>GF_ExportExcelReportExpSmall</strong></em> exports 2 extra columns called 'Total Plants received' and 'Plants lost sorting'.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="order">Order<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#order" class="hash-link" aria-label="Direct link to Order" title="Direct link to Order">​</a></h2>
+<p>Method <em><strong>Ord_ExportExcel_Flex</strong></em> has 2 new options for exporting called 'Week transport to NL' and 'List price assignment'</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-stuff">Web stuff<a href="https://iribov.github.io/xiphium-documentation/blog/2025/07/11/Xiphium-W28-Update/Index#web-stuff" class="hash-link" aria-label="Direct link to Web stuff" title="Direct link to Web stuff">​</a></h2>
+<p>The Media app has received some updates</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Xiphium 2025-W27 update]]></title>
             <link>https://Iribov.github.io/xiphium-documentation/blog/2025/07/04/Xiphium-W27-Update/Index</link>
@@ -685,47 +722,6 @@ Fields DiT_Invoicing_Reason_GF and GF_Invoicing_Reason have been.</p>
 <li>GHPA_ID_ProtCult</li>
 <li>Field_91</li>
 </ol>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Xiphium 2025-W07 update]]></title>
-            <link>https://Iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index</link>
-            <guid>https://Iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index</guid>
-            <pubDate>Fri, 14 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).]]></description>
-            <content:encoded><![CDATA[<p>Here is the weekly update of (significant) changes made in Xiphium this week, extracted from Git(Hub).</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>These are interpretations of code read from the weekly changes from Git(Hub) and are therefore prone to errors.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="financial">Financial<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#financial" class="hash-link" aria-label="Direct link to Financial" title="Direct link to Financial">​</a></h2>
-<p>Method <em><strong>Access_SetupFinancialMenu</strong></em> has 3 new output form and 3 new input form tabs added to it.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="investments">Investments<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#investments" class="hash-link" aria-label="Direct link to Investments" title="Direct link to Investments">​</a></h3>
-<p>Work has been done on the financial investment table(s). This is mostly front-end/visual work and less logic work.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deliveries">Deliveries<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#deliveries" class="hash-link" aria-label="Direct link to Deliveries" title="Direct link to Deliveries">​</a></h2>
-<p>Method <em><strong>DiT_Export_For_Transp_Invoice</strong></em>  has 6 columns added to it called:</p>
-<ul>
-<li>Plantcode</li>
-<li>Plantname</li>
-<li>/# containers</li>
-<li>Amount</li>
-<li>Price</li>
-<li>Total Price</li>
-</ul>
-<p>Method <em><strong>DiT_Export_PackingListExpress</strong></em> has a bold format added for the net weight, dimensions and the box.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="greenhouse_field">Greenhouse_Field<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#greenhouse_field" class="hash-link" aria-label="Direct link to Greenhouse_Field" title="Direct link to Greenhouse_Field">​</a></h2>
-<p>Method <em><strong>GF_ExportExcelReportEstimateQC</strong></em> has the new column "Type start material" added to it.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ghpa">GHPA<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#ghpa" class="hash-link" aria-label="Direct link to GHPA" title="Direct link to GHPA">​</a></h2>
-<p>Method <em><strong>GHPA_Automatic_Planning_Calc</strong></em> has been adjusted to only fire the forwards calculation when the when the stage3 delivery week is fixed or there are plants present in the greenhouse.</p>
-<p>Method <em><strong>GHPA_Backwards_Calculation</strong></em> is simplified for readability. The function should be (more or less) identical.</p>
-<p>Method <em><strong>GHPA_UpdateRecord_GF</strong></em> has been adjusted to use the temperature of the spaces history. Spaces history can now be used to plan thye temperature of a space.</p>
-<p>Method <em><strong>GHPA_ColorField</strong></em>  has been modified. The method is supposed to compare Start Week, end Week, Fust and temperature and make the field red when there is a change. However, because these comparisons are done with data from other tables, some are too slow to actually work. I might need to pull data into the GHPA table with the 'updaterecord' method to do a faster comparison. This does mean, however, that the comparison will always be out of date...</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analysis-order">Analysis Order<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#analysis-order" class="hash-link" aria-label="Direct link to Analysis Order" title="Direct link to Analysis Order">​</a></h2>
-<p>Bug in auto layout (automatic plate creation) resolved.</p>
-<p>Method <em><strong>AnSam_Import_Ploidy_Request</strong></em> has been adjusted to check for empty rows in the excel.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="apps">Apps<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#apps" class="hash-link" aria-label="Direct link to Apps" title="Direct link to Apps">​</a></h2>
-<p>Constant <code>Xiphium Media Storage App ID</code> is added to method <em><strong>Constants_Setup</strong></em>.</p>
-<p>Methods <em><strong>Web_MediaStorageController</strong></em>, <em><strong>Web_MediaStorageGetDetails</strong></em>, <em><strong>Web_MediaStorageGetMedia</strong></em>, <em><strong>Web_MediaStorageGetUser</strong></em> and <em><strong>Web_MediaStorageSaveDetails</strong></em> have been added for the MediaStorage app.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="misc">Misc<a href="https://iribov.github.io/xiphium-documentation/blog/2025/02/14/Xiphium-W07-Update/Index#misc" class="hash-link" aria-label="Direct link to Misc" title="Direct link to Misc">​</a></h2>
-<p>Method <em><strong>Constants_Add</strong></em> has it's syntax error in the <code>#DECLARE</code> fixed. And for some reason the <code>If (Count parameters&lt;4)</code> replaced by <code>If ($type="")</code></p>
-<p>Method <em><strong>Mail_NewMessage</strong></em> is modified to set property 'content' to 'html content'.</p>
-<p>Method <em><strong>Ord_DeliveryAnnouncementMail</strong></em> now sends to <a href="mailto:rob.laveaux@pluggers.nl" target="_blank" rel="noopener noreferrer">rob.laveaux@pluggers.nl</a> instead of <a href="mailto:info@pluggers.nl" target="_blank" rel="noopener noreferrer">info@pluggers.nl</a>.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
